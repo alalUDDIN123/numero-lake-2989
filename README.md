@@ -16,15 +16,10 @@
 
 --- 👍👍👍---
 
-`Note :- ` Actual Work Will Be Begin From Post Monday Evalution. I Request All Of You To Prepare For Upcomming
-Evalution.
- - Following Questions Answer Keep Ready With You (If Possible)
-   - What is the main goal of `Olx` website Or What this website do.
-   - Brief description of the site. 
-   - What is the flow of the site ❓
+# main page divided 
 
-## Best of luck for upcomming evalution 🧑‍💻
-
-### `If you have any query feel free to contact`
-------------------------------------------- Thank You ---------------------------------------------------------
-
+1. Home page ( Navbar And Footer)  ---->Abhijeet kale
+2. Products page---> (Sanghamitra satpathy)
+3. Admin page ----> Alal Uddin
+4. Wish list page (Chatting features) ---->  Aniket parmar 
+5. Login, sign up, preview page ---> Bhaskar
