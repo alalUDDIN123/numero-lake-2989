@@ -25,8 +25,12 @@ Evalution.
      - Olx is a online marketplace situated in german and headquartered in Amsterdam. This platform provide various facilities both buyer and seller.
    - What is the flow of the site ❓
 
-## Best of luck for upcomming evalution 🧑‍💻
 
-### `If you have any query feel free to contact`
-------------------------------------------- Thank You ---------------------------------------------------------
+1. Home page ( Navbar And Footer)  ---->Abhijeet kale
+2. Products page---> (Sanghamitra satpathy)
+3. Admin page ----> Alal Uddin
+4. Wish list page (Chatting features) ---->  Aniket parmar 
+5. Login, sign up, preview page ---> Bhaskar
 
+#API
+[API](https://olx-database.vercel.app/)
