@@ -12,7 +12,6 @@ function AllRoutes() {
       <Route path="/products" element={<Products />} ></Route>
       <Route path="/preview" element={<Preview/>} ></Route>
       <Route path="/admin" element={<Admin />} ></Route>
-    
       </Routes>
     </>
   )
