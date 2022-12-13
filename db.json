@@ -1,0 +1,12 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "Toyota Starlet",
+            "image": "https://apollo-singapore.akamaized.net/v1/files/mv0xq1xmk1db2-IN/image;s=300x600;q=60",
+            "price": 2342,
+            "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti impedit voluptatum ratione animi reprehenderit fuga cum quasi ea? Dicta, eligendi"
+             
+        }
+    ]
+}
