@@ -1,0 +1,32 @@
+
+.left>h1{
+  padding: 20px 0px;
+  border: 1px solid black;
+}
+.right{
+    /* border: 2px solid yellow; */
+    width: 100%;
+}
+
+table{
+    width: 100%;
+}
+table>thead{
+    border: 2px solid gray;
+}
+tbody>tr{
+    height: 5vh;
+    border: 1px solid red;
+}
+.image{
+    height: 50px
+}
+
+
+ tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+ tr:hover {
+    background-color: #ddd;
+}

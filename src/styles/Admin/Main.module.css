@@ -16,3 +16,6 @@
     width: 30%;
     border: 2px solid blue;
 }
+.max_width>div:last-child{
+    width: 70%;
+}
