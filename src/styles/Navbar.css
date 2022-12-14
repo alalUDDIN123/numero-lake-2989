@@ -1,0 +1,170 @@
+
+.maindiv{
+    display: flex;
+    height: 100px;
+     border: 1px solid;
+    background-color: blue;
+    align-items: center;
+    padding: 1rem ;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 1;
+}
+
+.oolx{
+ 
+    height: 4rem;
+    margin-left: 5rem;
+   
+}
+
+.language{
+   margin-left: 1rem; 
+   height: 2rem;
+   
+}
+
+.language:hover{
+    cursor: pointer;
+    
+}
+
+.maindiv>h3{
+    margin-left: 2rem;
+}
+.maindiv>h3:hover{
+    cursor: pointer;
+}
+
+.maindiv>button{
+    background-color: white;
+    margin-left: 2rem;
+    padding: 0.5rem  1rem;
+    border-radius: 40%;
+    font-size: large;
+    border-top-color: aqua;
+    border-left-color: yellow;
+    border-right-color: blue;
+    border-bottom-color: blueviolet;
+    border-width: 5px;
+}
+
+
+.maindiv>button:hover{
+    cursor: pointer;
+}
+
+.innerdiv{
+    display: flex;
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding:0 1rem;
+    cursor: pointer;
+    border-width: 2px;
+    border-color: aqua;
+    background-color: white;
+}
+
+.outerdiv{
+    width: 15rem; 
+}
+.innerdiv1{
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.option_list{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 1rem;
+  
+}
+.option_list:hover{
+    background-color: aqua;
+}
+
+.option_list>p{
+    margin-left: 1rem;
+}
+
+.option{
+    display: none;
+}
+
+.option1{
+    display: block;
+    position: absolute;
+    top: 60px;
+    background-color: white;
+    margin-left: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 11.5rem; 
+    margin-top: 2rem;
+}
+
+.languages{
+    /* border: 1px solid; */
+    width:8rem
+}
+
+
+.select{
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.option2{
+    display: none;
+}
+.option3{
+    display: block;
+    position: absolute;
+    top: 60px;
+    background-color: white;
+    margin-top: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.lang_list{
+    list-style-type: none;
+    width: 5rem ;
+    text-align: start; 
+}
+
+.lang_list:hover{
+   cursor: pointer;
+}
+
+.inputdiv{
+    display: flex;
+   /* border: 1px solid black; */
+}
+
+.inputdiv>p{
+    background-color: cornflowerblue;
+    /* padding: 1rem; */
+    border: 1px solid black;
+   height: 100%;
+
+}
+
+
+
+.inputdiv>.biginput{
+    width: 40rem;
+    margin-left: 1rem;
+    font-size: large;
+    padding:0  1rem;
+}
+
+.inputdiv>.biginput:hover{
+    border:1px solid turquoise;
+}
