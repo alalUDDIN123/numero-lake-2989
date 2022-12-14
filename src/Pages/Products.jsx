@@ -1,9 +1,10 @@
 import React from 'react'
+import FilterComp from './FilterComp'
 
 function Products() {
   return (
     <div>
-      Products
+      <FilterComp />
     </div>
   )
 }
