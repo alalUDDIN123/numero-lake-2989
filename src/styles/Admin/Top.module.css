@@ -1,0 +1,50 @@
+.head {
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    /* border: 1px solid black; */
+    margin: 30px auto;
+}
+
+.head>div {
+    width: 50%;
+    justify-content: space-evenly;
+    border: 1px solid red;
+}
+
+.head>div:first-child {
+    display: flex;
+}
+
+.head>div:last-child {
+    display: flex;
+}
+
+.head>div:nth-child(2) {
+    display: flex;
+}
+
+.search_div>input {
+    font-size: 20px;
+    border: 0px solid;
+    outline: none;
+    border-bottom-right-radius: none;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+    padding: 10px;
+}
+
+.search_div>img {
+    cursor: pointer;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    width: 13%;
+    height: 50px;
+}
+.category>h1{
+ margin-top: 15px;
+}
+.category>select{
+    width: 200px;
+    /* border: 1px solid red; */
+}

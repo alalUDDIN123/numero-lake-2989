@@ -1,21 +1,23 @@
 .max_width{
     width: 80%;
-    height: 80vh;
-    margin: 30px auto;
-    border: 1px solid black;
+    /* height: 80vh; */
+    margin: 10px auto;
+    /* border: 1px solid black; */
     display: flex;
 }
 
 .max_width>div{
     justify-content: space-between;
-    /* border: 2px solid red; */
+    /* border: 1px solid red; */
     width: 50%;
 }
 
 .max_width>div:first-child{
     width: 30%;
-    border: 2px solid blue;
+    border: 1px solid black;
+    height: 86vh;
 }
 .max_width>div:last-child{
     width: 70%;
+    border: 1px solid black;
 }
