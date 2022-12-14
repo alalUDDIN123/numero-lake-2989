@@ -1,7 +1,7 @@
 
 
 ## Project Code : numero-lake-2989
-## Project Name : olx
+## Project Name : Refurbished Product
 ## IA : Manoj Attri
 ## Project Type : Group (collaborative)
 ---
