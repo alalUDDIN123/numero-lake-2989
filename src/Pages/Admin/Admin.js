@@ -24,18 +24,11 @@ function Admin() {
     naviagte("users")
   }
 
-  // admin/feedback
-  const feedClick=()=>{
-    naviagte("feedback")
-  }
    // admin/contact
    const contactClick=()=>{
     naviagte("contact")
   }
 
-  const report=()=>{
-    naviagte("report")
-  }
   return (
     <div>
       <Top />
@@ -47,9 +40,8 @@ function Admin() {
             <h1 onClick={addproducts}>Add product</h1>
             <h1>All products</h1>
             <h1 onClick={UsersClick}>Users</h1>
-            <h1 onClick={feedClick}>Feedback</h1>
             <h1 onClick={contactClick}>Contact</h1>
-            <h1 onClick={report}>Report</h1>
+          
            
           </div>
 
