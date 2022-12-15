@@ -2,21 +2,26 @@ import {
     Add_Product_Failue,
     Add_Product_Request,
     Add_Product_Success,
+    Add_User,
     Delete_Product_Failure,
     Delete_Product_Request,
     Delete_Product_Success,
+    Delete_User,
     Get_Product_Failure,
     Get_Product_Request,
     Get_Product_Success,
+    Get_User,
     Updated_Product_Success,
     Update_Product_Request,
+    Update_User,
     UUpdate_Product_Failure
 } from "./actionTypes";
 
 const initialState = {
     data: [],
     isLoading:false,
-    isError:false
+    isError:false,
+    Users:[]
 }
 
 const reducer = (state = initialState, action) => {
@@ -138,7 +143,38 @@ const reducer = (state = initialState, action) => {
         };
 
 
-        // delete data end
+        //  =============================== 👍 Users =================
+
+        case Get_User:{
+            return{
+                ...state,
+                Users:payload
+            }
+        }
+
+        case Add_User: {
+
+            return {
+                ...state,
+                Users: [...state.Users, payload]
+            }
+        }
+
+        case Update_User:{
+            let NewUserdata= state.Users.map((user) => user.id === payload.id ? payload : user);
+            return{
+                ...state,
+                User:NewUserdata
+            }
+        }
+   
+         case Delete_User:{
+            let UserAfterDelete = state.Users.filter((user) => user.id !== payload.id);
+            return{
+             ...state,
+             Users:UserAfterDelete
+            }
+         }
         default: return state;
     }
 

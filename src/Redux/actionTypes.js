@@ -11,5 +11,14 @@ export const Updated_Product_Success = "Updated_Product_Success";
 export const UUpdate_Product_Failure = "UUpdate_Product_Failure";
 
 export const Delete_Product_Request = "Delete_Product_Request";
-export const Delete_Product_Success = "Delete_Product_Success";
+export const Delete_Product_Success= "Delete_Product_Success";
 export const Delete_Product_Failure = "Delete_Product_Failure";
+
+
+
+export const Get_User = "Get_User";
+export const Add_User = "Add_User";
+export const Delete_User= "Delete_User";
+export const Update_User="Update_User"
+
+export const Search_Product= "Search_Product"

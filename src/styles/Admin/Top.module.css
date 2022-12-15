@@ -9,7 +9,7 @@
 .head>div {
     width: 50%;
     justify-content: space-evenly;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .head>div:first-child {

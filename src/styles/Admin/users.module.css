@@ -7,4 +7,14 @@
     background-color: black;
     color: white;
     font-size: 30px;
+    padding: 20px;
+}
+.container>h1>span{
+
+    color: yellow;
+ 
+}
+.container>h1>span>svg{
+    font-size: 30px;
+    float: right;
 }

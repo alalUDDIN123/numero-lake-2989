@@ -77,7 +77,7 @@ function Admin() {
         {data && data.map((item, index) => (
           <Right
             index={index + 1}
-            id={item.id}
+            productId={item.id}
             key={item.id}
             title={item.title}
             image={item.image}
