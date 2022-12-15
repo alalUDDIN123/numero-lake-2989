@@ -3,16 +3,20 @@ import styles from "../../styles/Admin/Main.module.css"
 import sidebar from "../../styles/Admin/sidebar.module.css"
 import Top from './Top'
 import { Right } from "./Right"
-import { Dummy } from './dummy'
+
 import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { getProducts } from '../../Redux/actions'
 function Admin() {
-  const [width, setWidth] = useState(false)
+  const data= useSelector(store=>store.data)
+  // const [width, setWidth] = useState(false)
   const naviagte=useNavigate()
-  useEffect(() => {
-    if (window.innerWidth === 1366 || window.innerWidth > 1200) {
-      setWidth(true)
-    }
-  }, [])
+  const dispatch= useDispatch()
+  // useEffect(() => {
+  //   if (window.innerWidth === 1366 || window.innerWidth > 1200) {
+  //     setWidth(true)
+  //   }
+  // }, [])
 
   // add products button redirect
   const addproducts=()=>{
@@ -28,6 +32,16 @@ function Admin() {
    const contactClick=()=>{
     naviagte("contact")
   }
+
+
+ useEffect(()=>{
+  if(data.length===0){
+    dispatch(getProducts())
+  }
+ })
+
+
+
 
   return (
     <div>
@@ -60,7 +74,7 @@ function Admin() {
       </thead>
 
       <tbody>
-        {Dummy.map((item, index) => (
+        {data && data.map((item, index) => (
           <Right
             index={index + 1}
             key={item.id}
