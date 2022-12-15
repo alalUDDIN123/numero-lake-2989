@@ -55,7 +55,7 @@ export const Updateproducts = (id, payload) => async (dispatch) => {
 export const DeleteProduct= (id) => async (dispatch) => {
     dispatch({ type: Delete_Product_Request })
     try {
-        let data = await axios.delete(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/tasks/${id}`)
+        let data = await axios.delete(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/products/${id}`)
         dispatch({ type: Delete_Product_Success, payload: data.data })
     } catch (error) {
         dispatch({ type: Delete_Product_Failure })

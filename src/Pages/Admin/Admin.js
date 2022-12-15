@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import styles from "../../styles/Admin/Main.module.css"
 import sidebar from "../../styles/Admin/sidebar.module.css"
 import Top from './Top'
@@ -77,6 +77,7 @@ function Admin() {
         {data && data.map((item, index) => (
           <Right
             index={index + 1}
+            id={item.id}
             key={item.id}
             title={item.title}
             image={item.image}

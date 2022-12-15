@@ -1,79 +1,32 @@
 {
-    "products":[
-        {
-            "id":1,
-            "title":"First product",
-            "image":"https://apollo-singapore.akamaized.net/v1/files/xkum509odcjd-IN/image;s=300x600;q=60",
-            "price":150
-        },
-        {
-            "id":2,
-            "title":"First product",
-            "image":"https://apollo-singapore.akamaized.net/v1/files/xkum509odcjd-IN/image;s=300x600;q=60",
-            "price":150
-        },
-        {
-            "id":3,
-            "title":"First product",
-            "image":"https://apollo-singapore.akamaized.net/v1/files/xkum509odcjd-IN/image;s=300x600;q=60",
-            "price":150
-        },
-        {
-            "id":4,
-            "title":"First product",
-            "image":"https://apollo-singapore.akamaized.net/v1/files/xkum509odcjd-IN/image;s=300x600;q=60",
-            "price":150
-        },
-        {
-            "id":5,
-            "title":"First product",
-            "image":"https://apollo-singapore.akamaized.net/v1/files/xkum509odcjd-IN/image;s=300x600;q=60",
-            "price":150
-        },
-        {
-            "id":6,
-            "title":"First product",
-            "image":"https://apollo-singapore.akamaized.net/v1/files/xkum509odcjd-IN/image;s=300x600;q=60",
-            "price":150
-        },
-        {
-            "id":7,
-            "title":"First product",
-            "image":"https://apollo-singapore.akamaized.net/v1/files/xkum509odcjd-IN/image;s=300x600;q=60",
-            "price":150
-        },
-        {
-            "id":8,
-            "title":"First product",
-            "image":"https://apollo-singapore.akamaized.net/v1/files/xkum509odcjd-IN/image;s=300x600;q=60",
-            "price":150
-        }
-       
-    ],
-    "Users":[
-        {
-            "name":"user1",
-            "email":"user1@gmail.com",
-            "avator":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfd3PPulVSp4ZbuBFNkePoUR_fLJQe474Ag&usqp=CAU"
-     
-         },
-         {
-             "name":"user2",
-             "email":"user2@gmail.com",
-             "avator":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfd3PPulVSp4ZbuBFNkePoUR_fLJQe474Ag&usqp=CAU"
-      
-          },
-          {
-             "name":"user3",
-             "email":"user3@gmail.com",
-             "avator":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfd3PPulVSp4ZbuBFNkePoUR_fLJQe474Ag&usqp=CAU"
-      
-          },
-          {
-             "name":"user4",
-             "email":"user4@gmail.com",
-             "avator":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfd3PPulVSp4ZbuBFNkePoUR_fLJQe474Ag&usqp=CAU"
-      
-          }
-    ]
+  "products": [
+    {
+      "id": 2,
+      "title": "Updated product 1",
+      "image": "https://thumbs.dreamstime.com/b/rainbow-love-heart-background-red-wood-60045149.jpg",
+      "price": "343"
+    }
+  ],
+  "Users": [
+    {
+      "name": "user1",
+      "email": "user1@gmail.com",
+      "avator": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfd3PPulVSp4ZbuBFNkePoUR_fLJQe474Ag&usqp=CAU"
+    },
+    {
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "avator": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfd3PPulVSp4ZbuBFNkePoUR_fLJQe474Ag&usqp=CAU"
+    },
+    {
+      "name": "user3",
+      "email": "user3@gmail.com",
+      "avator": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfd3PPulVSp4ZbuBFNkePoUR_fLJQe474Ag&usqp=CAU"
+    },
+    {
+      "name": "user4",
+      "email": "user4@gmail.com",
+      "avator": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfd3PPulVSp4ZbuBFNkePoUR_fLJQe474Ag&usqp=CAU"
+    }
+  ]
 }

@@ -3,24 +3,28 @@ import sidebar from "../../styles/Admin/sidebar.module.css"
 import { GrView } from 'react-icons/gr';
 import { BiEdit } from 'react-icons/bi';
 import { MdOutlineDelete } from 'react-icons/md';
-const Right = ({index,title,image,price}) => {
+import { useDispatch } from "react-redux";
+import { DeleteProduct, getProducts } from "../../Redux/actions";
+import { useNavigate } from "react-router-dom";
 
+const Right = ({index,title,image,price,id}) => {
+
+const navigate=useNavigate()
+  const dispatch= useDispatch()
   // view 
 
   const ViewHandle=(id)=>{
  alert(id)
   }
 
-  // Edit 
 
-  const EditHandle=(id)=>{
-    alert(id)
-  }
-
-  // Delete handle
 
   const DeleteHandle=(id)=>{
-    alert(id)
+    if(window.confirm(`Are you sure want to delete this  item`)){
+      dispatch(DeleteProduct(id))
+      dispatch(getProducts())
+    }
+   
   }
   return <>
     <tr>
@@ -31,20 +35,13 @@ const Right = ({index,title,image,price}) => {
         <td>{title}</td>
         <td>₹ {price}.00</td>
           <td>
-          <GrView onClick={()=>ViewHandle(index)} style={{cursor:"pointer", fontSize:"20px"}} />
-          <BiEdit onClick={()=>EditHandle(index)} style={{cursor:"pointer", fontSize:"20px", color:"blue"}} />
-          <MdOutlineDelete onClick={()=>DeleteHandle(index)} style={{cursor:"pointer", fontSize:"23px", color:"red"}} />
+          <GrView onClick={()=>ViewHandle(id)} style={{cursor:"pointer", fontSize:"20px"}} />
+          <BiEdit onClick={()=>navigate(`Product/edit/${id}`)} style={{cursor:"pointer", fontSize:"20px", color:"blue"}} />
+          <MdOutlineDelete onClick={()=>DeleteHandle(id)} style={{cursor:"pointer", fontSize:"23px", color:"red"}} />
           </td>
-          {/* <td>
-        <GrView />
-        </td>
-        <td>
-            <BiEdit />
-        </td>
-        <td>
-            <MdOutlineDelete />
-        </td> */}
+
       </tr>
+
   </>;
 };
 export { Right };
