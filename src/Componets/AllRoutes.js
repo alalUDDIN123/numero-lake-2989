@@ -1,6 +1,6 @@
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
-import Admin from '../Pages/Admin'
+import Admin from '../Pages/Admin/Admin'
 import Home from '../Pages/Home'
 import Preview from '../Pages/Preview'
 import Products from '../Pages/Products'
