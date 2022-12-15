@@ -66,7 +66,7 @@ const FilterComp = () => {
     ]
 
   return (
-    <Box w="27%" textAlign="left" display="flex" justifyContent="flex-end">
+    <Box textAlign="left" display="flex" justifyContent="flex-end">
       <Box w="90%" >
         <Box className="filtetcompHome">
             <Text fontSize="25px" fontWeight="bold">Used Cars in India</Text>
