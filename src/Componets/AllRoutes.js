@@ -1,7 +1,8 @@
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
 import AddProductForm from '../Pages/Admin/AddProductForm'
-import Admin from '../Pages/Admin/Admin/Admin'
+import Admin from '../Pages/Admin/Admin'
+
 import Contact from '../Pages/Admin/Contact'
 import EditProduct from '../Pages/Admin/EditProduct'
 import Users from '../Pages/Admin/Users'
