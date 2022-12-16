@@ -6,9 +6,9 @@ import { getProducts } from '../../Redux/actions'
 import styles from "../../styles/Admin/Top.module.css"
 
 
-function Top({getterm}) {
+function Top() {
 
-    const [term, setTerm] = useState("p")
+    const [term, setTerm] = useState("")
 
    const dispatch= useDispatch()
  

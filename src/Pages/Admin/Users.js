@@ -61,6 +61,8 @@ const handleSubmit=()=>{
 
   }
   dispatch(addUser(payload))
+  onClose()
+
 }
   return (
     <div className={style.container}>
@@ -99,7 +101,7 @@ const handleSubmit=()=>{
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={handleSubmit}>
+            <Button colorScheme='blue' mr={3} onClick={handleSubmit} >
               Submit
             </Button>
             <Button onClick={onClose}>Cancel</Button>

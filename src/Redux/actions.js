@@ -25,13 +25,25 @@ import {
 } from "./actionTypes"
 
 export const getProducts = (term) => async (dispatch) => {
+
     dispatch({ type: Get_Product_Request })
-    try {
-        let data = await axios.get(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/products?q=${term}`)
-        // console.log(data)
-        dispatch({ type: Get_Product_Success, payload: data.data })
-    } catch (error) {
-        dispatch({ type: Get_Product_Failure })
+    if(term===undefined){
+        try {
+            let data = await axios.get(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/products`)
+            // console.log(data)
+            dispatch({ type: Get_Product_Success, payload: data.data })
+        } catch (error) {
+            dispatch({ type: Get_Product_Failure })
+        }
+    }else{
+
+        try {
+            let data = await axios.get(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/products?q=${term}`)
+            // console.log(data)
+            dispatch({ type: Get_Product_Success, payload: data.data })
+        } catch (error) {
+            dispatch({ type: Get_Product_Failure })
+        }
     }
 }
 
