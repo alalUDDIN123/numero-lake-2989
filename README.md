@@ -16,14 +16,7 @@
 
 --- 👍👍👍---
 
-`Note :- ` Actual Work Will Be Begin From Post Monday Evalution. I Request All Of You To Prepare For Upcomming
-Evalution.
- - Following Questions Answer Keep Ready With You (If Possible)
-   - What is the main goal of `Olx` website Or What this website do.
-     - Olx provide diffrent types of products through online
-   - Brief description of the site. 
-     - Olx is a online marketplace situated in german and headquartered in Amsterdam. This platform provide various facilities both buyer and seller.
-   - What is the flow of the site ❓
+
 
 
 1. Home page ( Navbar And Footer)  ---->Abhijeet kale
