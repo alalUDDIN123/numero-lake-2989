@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Products() {
+function Report() {
   return (
     <div>
-      Products
+      <h1>Report</h1>
     </div>
   )
 }
 
-export default Products
+export default Report

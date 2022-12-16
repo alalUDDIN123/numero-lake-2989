@@ -1,5 +1,60 @@
 {
-    "products":[
-        {}
-    ]
+  "products": [
+    {
+      "id": 2,
+      "title": "Updated product 1",
+      "image": "https://thumbs.dreamstime.com/b/rainbow-love-heart-background-red-wood-60045149.jpg",
+      "price": "343"
+    },
+    {
+      "title": "p1",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/a25p3qikh9w23-IN/image;s=300x600;q=60",
+      "price": "3435",
+      "id": 3
+    },
+    {
+      "title": "p2",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/ucybrfjwn6qs2-IN/image;s=300x600;q=60",
+      "price": "453",
+      "id": 4
+    },
+    {
+      "title": "p3",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/la40jt1wzkv03-IN/image;s=300x600;q=60",
+      "price": "353",
+      "id": 5
+    },
+    {
+      "title": "p4",
+      "image": "https://apollo-singapore.akamaized.net/v1/files/h931cwoy6y3l3-IN/image;s=300x600;q=60",
+      "price": "3453",
+      "id": 6
+    }
+  ],
+  "Users": [
+    {
+      "id": 2,
+      "name": "Bhaskar Jha",
+      "email": "Bhaskar Jha@gmail.com",
+      "avator": "https://ca.slack-edge.com/T049YSPNG02-U04AV415RGT-c40159026fd4-512"
+    },
+    {
+      "id": 3,
+      "name": "Sanghamitra Satpathy",
+      "email": "Sanghamitra Satpathy@gmail.com",
+      "avator": "https://ca.slack-edge.com/T049YSPNG02-U04BFM585L2-08ac0bde8282-512"
+    },
+    {
+      "id": 4,
+      "name": "Anikit Parmer",
+      "email": "Anikit Parmer@gmail.com",
+      "avator": "https://ca.slack-edge.com/T049YSPNG02-U04AUC8H5DK-3dbcb780d3a9-512"
+    },
+    {
+      "id": 5,
+      "name": "Alal",
+      "email": "Alal@gmail.com",
+      "avator": "https://avatars.githubusercontent.com/u/103570261?v=4"
+    }
+  ]
 }
