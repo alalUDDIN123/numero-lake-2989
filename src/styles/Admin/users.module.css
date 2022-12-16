@@ -3,6 +3,14 @@
     margin: 30px auto;
 }
 
+.container>span>svg{
+    float: left;
+    font-size: 33px;
+    color: yellow;
+    margin-top: 25px;
+    width: 70px;
+}
+
 .container>h1{
     background-color: black;
     color: white;

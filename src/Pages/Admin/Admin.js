@@ -6,7 +6,8 @@ import { Right } from "./Right";
 
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../../Redux/actions";
+
+import { getProducts } from "../../Redux/AppReducer/action";
 function Admin() {
   const data = useSelector((store) => store.data);
 
@@ -18,6 +19,8 @@ function Admin() {
   //     setWidth(true)
   //   }
   // }, [])
+
+
 
   // add products button redirect
   const addproducts = () => {
@@ -34,11 +37,15 @@ function Admin() {
     naviagte("contact");
   };
 
-  useEffect(() => {
-    if (data.length === 0) {
-      dispatch(getProducts());
-    }
-  }, [dispatch, data.length]);
+
+ useEffect(()=>{
+  if(data.length===0){
+    dispatch(getProducts())
+  }
+ },[dispatch,data.length])
+
+
+
 
   return (
     <div>

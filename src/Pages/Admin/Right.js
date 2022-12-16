@@ -4,7 +4,7 @@ import sidebar from "../../styles/Admin/sidebar.module.css";
 import { BiEdit } from "react-icons/bi";
 import { MdOutlineDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { DeleteProduct, getProducts } from "../../Redux/actions";
+import { DeleteProduct, getProducts } from "../../Redux/AppReducer/action";
 import { useNavigate } from "react-router-dom";
 
 const Right = ({ index, title, image, price, productId }) => {

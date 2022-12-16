@@ -5,13 +5,17 @@ import { BiEdit } from "react-icons/bi";
 import { MdOutlineDelete } from "react-icons/md";
 
 import { useDispatch } from "react-redux";
-import { DeleteUser, getUser } from "../../Redux/actions";
+import { DeleteUser, getUser } from "../../Redux/AppReducer/action";
 
 const UserTable = ({ index, name, avator, email, userId }) => {
-  const dispatch = useDispatch();
-  const EditHandle = () => {};
 
-  const DeleteHandle = (id) => {
+
+   const dispatch= useDispatch()
+    const EditHandle=(id)=>{
+      alert(id)
+    }
+
+  const DeleteHandle=(id)=>{
     if (window.confirm(`Are you sure want to delete this  user`)) {
       dispatch(DeleteUser(id));
       dispatch(getUser());

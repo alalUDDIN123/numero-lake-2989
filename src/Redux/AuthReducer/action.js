@@ -17,7 +17,7 @@ export const signInWithGoogle = (auth, provider) => (dispatch) => {
         payload: user,
       });
       // ...
-    })
+    }) 
     .catch((error) => {
       // Handle Errors here.
       const errorCode = error.code;

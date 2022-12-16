@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { addUser, getUser } from '../../Redux/actions'
+import { addUser, getUser } from "../../Redux/AppReducer/action";
 import style from "../../styles/Admin/users.module.css"
 import { IoMdAddCircle} from 'react-icons/io';
+import { IoChevronBackCircleSharp} from 'react-icons/io5';
 import { UserTable } from './UserTable'
 
 import {
@@ -20,6 +20,7 @@ import {
   Button,
   Input,
 } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom';
 
 
 const InitialState={
@@ -35,7 +36,7 @@ function Users() {
   const initialRef = React.useRef(null)
   const finalRef = React.useRef(null)
   const dispatch = useDispatch()
-
+ const navigate= useNavigate()
   useEffect(() => {
     if (Users.length === 0) {
       dispatch(getUser())
@@ -54,20 +55,29 @@ const handleChange=(e)=>{
 
 
 const handleSubmit=()=>{
-  let payload={
-    name:state.fullName,
-    avator:state.avator,
-    email:state.email
-
+  if(state.fullName==="" || state.email===""|| state.avator===""){
+    alert("Please Enter all field")
+  }else{
+    let payload={
+      name:state.fullName,
+      avator:state.avator,
+      email:state.email
+  
+    }
+    dispatch(addUser(payload))
+    onClose()
   }
-  dispatch(addUser(payload))
-  onClose()
 
 }
   return (
     <div className={style.container}>
+      <span style={{
+        cursor:"pointer"
+      }}> <IoChevronBackCircleSharp onClick={()=>navigate("/admin")} /> </span>
       <h1>Users who are signed up 
-        <span onClick={onOpen}> <IoMdAddCircle /></span>
+        <span onClick={onOpen} style={{
+        cursor:"pointer"
+      }}> <IoMdAddCircle /></span>
       </h1>
 
       <Modal
@@ -84,7 +94,7 @@ const handleSubmit=()=>{
             <FormControl isRequired>
               <FormLabel>Full Name</FormLabel>
               <Input ref={initialRef} placeholder='Enter full name'
-              value={state.fullName} name="fullName" onChange={handleChange}/>
+              value={state.fullName} name="fullName" onChange={handleChange} />
             </FormControl>
 
             <FormControl mt={4} isRequired>
