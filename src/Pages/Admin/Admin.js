@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect} from 'react'
 import styles from "../../styles/Admin/Main.module.css"
 import sidebar from "../../styles/Admin/sidebar.module.css"
 import Top from './Top'
@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../../Redux/actions'
 function Admin() {
   const data= useSelector(store=>store.data)
-  // const [width, setWidth] = useState(false)
+
   const naviagte=useNavigate()
   const dispatch= useDispatch()
 
@@ -42,7 +42,7 @@ function Admin() {
   if(data.length===0){
     dispatch(getProducts())
   }
- },[])
+ },[dispatch,data.length])
 
 
 
