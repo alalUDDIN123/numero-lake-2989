@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
+
 import { getProducts } from '../../Redux/actions'
 
 import styles from "../../styles/Admin/Top.module.css"
 
 
-function Top() {
+function Top({getterm}) {
 
-    const [term, setTerm] = useState("")
+    const [term, setTerm] = useState("p")
 
-    const dispatch = useDispatch()
+   const dispatch= useDispatch()
+ 
+     useEffect(()=>{
+       dispatch(getProducts(term)) 
+     },[term,dispatch])
 
-   
-    useEffect(() => {
-      
-        dispatch(getProducts(term))
-    }, [term])
 
     return (
         <>

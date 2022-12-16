@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React, { useEffect, useState} from 'react'
 import styles from "../../styles/Admin/Main.module.css"
 import sidebar from "../../styles/Admin/sidebar.module.css"
 import Top from './Top'
@@ -12,11 +12,15 @@ function Admin() {
   // const [width, setWidth] = useState(false)
   const naviagte=useNavigate()
   const dispatch= useDispatch()
+
+
   // useEffect(() => {
   //   if (window.innerWidth === 1366 || window.innerWidth > 1200) {
   //     setWidth(true)
   //   }
   // }, [])
+
+
 
   // add products button redirect
   const addproducts=()=>{
@@ -38,14 +42,14 @@ function Admin() {
   if(data.length===0){
     dispatch(getProducts())
   }
- })
+ },[])
 
 
 
 
   return (
     <div>
-      <Top />
+      <Top  />
       <section>
         {/* Left side */}
         <div className={styles.max_width}>

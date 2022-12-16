@@ -29,21 +29,9 @@
       "image": "https://apollo-singapore.akamaized.net/v1/files/h931cwoy6y3l3-IN/image;s=300x600;q=60",
       "price": "3453",
       "id": 6
-    },
-    {
-      "title": "p5",
-      "image": "https://apollo-singapore.akamaized.net/v1/files/tdhuxemltppn3-IN/image;s=300x600;q=60",
-      "price": "4353",
-      "id": 7
     }
   ],
   "Users": [
-    {
-      "id": 1,
-      "name": "Abhijitkala",
-      "email": "Abhijitkala@gmail.com",
-      "avator": "https://ca.slack-edge.com/T049YSPNG02-U04AXQGCH6G-146f35c95621-512"
-    },
     {
       "id": 2,
       "name": "Bhaskar Jha",
