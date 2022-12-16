@@ -1,0 +1,20 @@
+.container{
+    width: 80%; 
+    margin: 30px auto;
+}
+
+.container>h1{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+}
+.container>h1>span{
+
+    color: yellow;
+ 
+}
+.container>h1>span>svg{
+    font-size: 30px;
+    float: right;
+}

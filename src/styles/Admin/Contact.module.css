@@ -1,0 +1,11 @@
+.contact{
+    width: 80%;
+    height: 50vh;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+.map{
+    width: 80%;
+    height: 70vh;
+    margin: auto; 
+}
