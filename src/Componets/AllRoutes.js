@@ -9,9 +9,12 @@ import Users from "../Pages/Admin/Users";
 import Home from "../Pages/Home";
 import Preview from "../Pages/Preview";
 import Products from "../Pages/Products";
+// import Navbar from "./Navbar";
+
 function AllRoutes() {
   return (
     <>
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
 
