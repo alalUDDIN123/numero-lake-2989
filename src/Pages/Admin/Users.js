@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
-import { addUser, getUser } from '../../Redux/actions'
+import { addUser, getUser } from "../../Redux/AppReducer/action";
 import style from "../../styles/Admin/users.module.css"
 import { IoMdAddCircle} from 'react-icons/io';
 import { IoChevronBackCircleSharp} from 'react-icons/io5';

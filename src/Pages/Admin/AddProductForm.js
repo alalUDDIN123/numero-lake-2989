@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { addproducts } from '../../Redux/actions'
+import { addproducts } from "../../Redux/AppReducer/action";
 import style from "../../styles/Admin/addForm.module.css"
 
 const Initial = {

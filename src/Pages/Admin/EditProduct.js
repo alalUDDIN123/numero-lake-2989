@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
-import { getProducts, Updateproducts } from '../../Redux/actions'
+import { getProducts, Updateproducts } from "../../Redux/AppReducer/action";
 import style from "../../styles/Admin/addForm.module.css"
 
 function EditProduct() {
