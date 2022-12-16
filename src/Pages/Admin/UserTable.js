@@ -10,8 +10,8 @@ import { DeleteUser, getUser } from "../../Redux/actions";
 const UserTable= ({index,name,avator,email,userId}) => {
 
    const dispatch= useDispatch()
-    const EditHandle=()=>{
-
+    const EditHandle=(id)=>{
+      alert(id)
     }
 
   const DeleteHandle=(id)=>{

@@ -7,6 +7,7 @@ import { Right } from "./Right"
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../../Redux/actions'
+
 function Admin() {
   const data= useSelector(store=>store.data)
 
@@ -19,6 +20,8 @@ function Admin() {
   //     setWidth(true)
   //   }
   // }, [])
+
+
 
 
 
@@ -43,8 +46,6 @@ function Admin() {
     dispatch(getProducts())
   }
  },[dispatch,data.length])
-
-
 
 
   return (
