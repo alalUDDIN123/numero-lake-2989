@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { getProducts } from "../../Redux/AppReducer/action";
 function Admin() {
-  const data = useSelector((store) => store.data);
+  const data = useSelector((store) => store.AppReducer.data);
 
   const naviagte = useNavigate();
   const dispatch = useDispatch();
@@ -44,11 +44,11 @@ function Admin() {
   }
  },[dispatch,data.length])
 
-
+// console.log(data,"from component")
 
 
   return (
-    <div>
+    <div className={styles.a}>
       <Top />
       <section>
         {/* Left side */}
@@ -83,8 +83,8 @@ function Admin() {
                       productId={item.id}
                       key={item.id}
                       title={item.title}
-                      image={item.image}
-                      price={item.price}
+                      image={item.images[0].url}
+                      price={item.price.value?.raw}
                     />
                   ))}
               </tbody>

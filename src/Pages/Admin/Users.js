@@ -30,7 +30,7 @@ const InitialState={
 }
 function Users() {
 
-  const UsersData = useSelector(store => store.Users)
+  const UsersData = useSelector(store => store.AppReducer.Users)
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [state,setState]= useState(InitialState)
   const initialRef = React.useRef(null)

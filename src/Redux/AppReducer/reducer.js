@@ -38,6 +38,7 @@ const reducer = (state = initialState, action) => {
         }
 
         case Get_Product_Success: {
+            // console.log(payload,"from reducer")
             return {
                 ...state,
                 data: payload,

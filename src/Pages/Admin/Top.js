@@ -29,8 +29,7 @@ function Top() {
                         placeholder="Search here..."
                         onChange={(e) => setTerm(e.target.value)}
                     />
-                    <img src="https://static.vecteezy.com/system/resources/previews/001/591/517/non_2x/free-search-icon-free-vector.jpg" alt=""
-                   />
+                   
                 </div>
             </div>
         </>

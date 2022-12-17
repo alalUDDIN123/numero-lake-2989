@@ -29,7 +29,7 @@ export const getProducts = (term) => async (dispatch) => {
     dispatch({ type: Get_Product_Request })
     if(term===undefined){
         try {
-            let data = await axios.get(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/products`)
+            let data = await axios.get(`https://olx-database.vercel.app/mobile`)
             // console.log(data)
             dispatch({ type: Get_Product_Success, payload: data.data })
         } catch (error) {
@@ -38,7 +38,7 @@ export const getProducts = (term) => async (dispatch) => {
     }else{
 
         try {
-            let data = await axios.get(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/products?q=${term}`)
+            let data = await axios.get(`https://olx-database.vercel.app/mobile?q=${term}`)
             // console.log(data)
             dispatch({ type: Get_Product_Success, payload: data.data })
         } catch (error) {
@@ -53,7 +53,7 @@ export const getProducts = (term) => async (dispatch) => {
 export const addproducts = (payload) => async (dispatch) => {
     dispatch({ type: Add_Product_Request })
     try {
-        let data = await axios.post(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/products`, payload)
+        let data = await axios.post(`https://olx-database.vercel.app/mobile`, payload)
         dispatch({ type: Add_Product_Success, payload: data.data })
     } catch (error) {
         dispatch({ type: Add_Product_Failue })
@@ -65,7 +65,7 @@ export const addproducts = (payload) => async (dispatch) => {
 export const Updateproducts = (id, payload) => async (dispatch) => {
     dispatch({ type: Update_Product_Request })
     try {
-        let data = await axios.patch(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/products/${id}`, payload)
+        let data = await axios.patch(`https://olx-database.vercel.app/mobile/${id}`, payload)
         dispatch({ type: Updated_Product_Success, payload: data.data })
     } catch (error) {
         dispatch({ type: UUpdate_Product_Failure })
@@ -77,7 +77,7 @@ export const Updateproducts = (id, payload) => async (dispatch) => {
 export const DeleteProduct= (id) => async (dispatch) => {
     dispatch({ type: Delete_Product_Request })
     try {
-        let data = await axios.delete(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/products/${id}`)
+        let data = await axios.delete(`https://olx-database.vercel.app/mobile/${id}`)
         dispatch({ type: Delete_Product_Success, payload: data.data })
     } catch (error) {
         dispatch({ type: Delete_Product_Failure })

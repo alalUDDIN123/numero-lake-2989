@@ -20,7 +20,8 @@ const Contact = () => {
   
   return (
    <> 
-     <div className={style.contact}>
+    <div className={style.c}>
+    <div className={style.contact}>
       <h1>Contact us</h1>
       <form action="">
         <input type="text" placeholder="Enter name"/> <br />
@@ -46,6 +47,7 @@ const Contact = () => {
           </iframe> 
     </div>
      }
+    </div>
     </>
   );
 };
