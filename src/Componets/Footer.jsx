@@ -17,12 +17,12 @@ const Footer = () => {
         <div><h5>TRENDING LOCATIONS</h5>
         <p>Bhubaneshwar</p> <p>Hyderabad</p><p>Chandigarh</p><p>Nashik</p>
        </div>
-        <div><h5>ABOUT US</h5>
+        <div className='about_div'  ><h5>ABOUT US</h5>
         <p>About OLX Group</p> <p>Careers
 </p><p>Contact Us</p><p>OLXPeople</p> <p>Waah Jobs</p> </div>
-        <div><h5>OLX</h5>
+        <div className='olx_div' ><h5>OLX</h5>
         <p>Help</p> <p>Sitemap</p><p>Legal & Privacy information</p><p>Blog</p> <p>OLX Autos Sell Car</p></div>
-        <div><h5>FOLLOW US</h5>
+        <div className='logo_div' ><h5>FOLLOW US</h5>
         <div className='logo'>
   <img src={facebook} />
   <img src={insta} />

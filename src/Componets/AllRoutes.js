@@ -9,7 +9,7 @@ import Users from "../Pages/Admin/Users";
 import Home from "../Pages/Home";
 import Preview from "../Pages/Preview";
 import Products from "../Pages/Products";
-// import Navbar from "./Navbar";
+
 
 function AllRoutes() {
   return (
@@ -17,7 +17,6 @@ function AllRoutes() {
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
-
         <Route path="/products" element={<Products />}></Route>
         <Route path="/preview" element={<Preview />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
