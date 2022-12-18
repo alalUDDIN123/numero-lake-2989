@@ -5,58 +5,26 @@ import { faChevronDown , faMagnifyingGlass , faLocationDot , faChevronUp , faPlu
 import { useState } from 'react'
 import { useEffect } from 'react'
 import axios from "axios"
-import { useDispatch, useSelector } from 'react-redux'
-import { home_data_1 } from '../Redux/AppReducer/actionTypes'
-import {Link} from "react-router-dom"
 
-const Homes = () => {
-  const [load, Setload] = useState([]); //for load data
-  const [menu, Setmenu] = useState(false);
-  const [button, Setbutton] = useState(true); //for load button on/off
-  const dispatch = useDispatch();
-  const filters = useSelector((state) => state.AppReducer.filter_data);
-  const data = useSelector((state) => state.AppReducer.home_data);
-  const change = () => {
-    Setmenu(!menu);
-  };
 
-  //load data
-  const get_data = () => {
-    axios({
-      method: "get",
-      baseURL: "https://olx-database.vercel.app",
-      url: "/page2",
-    }).then((res) => Setload(res.data));
-  };
+const Home = () => {
 
-  // load_more function
+  const[menu,Setmenu] = useState(false) 
+ const[data,Setdata] = useState([])
 
-  const load_More = async () => {
-    await get_data();
+  const change=()=>{
+    Setmenu(!menu)
+  }
 
-    Array.prototype.push.apply(data, load);
-    dispatch({ type: home_data_1, payload: data });
-    Setbutton(false);
-  };
 
-  // main data
-  const call_again = () => {
-    axios({
-      method: "get",
-      baseURL: "https://olx-database.vercel.app",
-      url: "/page3",
-    }).then((res) => dispatch({ type: home_data_1, payload: res.data }));
-  };
+  useEffect(()=>{
+    axios({method:"get" ,baseURL:"https://olx-database.vercel.app" , url:"/page3"  }).then((res)=> Setdata(res.data))
+  },[])
 
-  useEffect(() => {
-    call_again();
-
-    get_data();
-  }, []);
+   console.log(data)
 
   return (
-  <>
- 
+
     <div className='mains'>
       <div className='lower_nav'>
       <div className='drop_down' >
@@ -135,7 +103,6 @@ const Homes = () => {
        </div>
 
       </div>
-      
       <p className='p_tag' >Cars</p>
       <p className='p_tag'>Motorcycles</p>
       <p className='p_tag'>Mobile Phones</p>
@@ -144,36 +111,24 @@ const Homes = () => {
       <p className='p_tag'>Scooters</p>
       <p className='p_tag'>Commercial & Other Vehicles</p>
       <p className='p_tag'>For Rent: Houses & Apartments</p>
-      
       </div>
       <div className='banner'>
         <img src="https://statics.olx.in/olxin/banners/hero_bg_in_v3@1x.png" />
       </div>
       
       <div className='products' >
-          {filters.length>0? filters.map((item,index)=>{
-          return  <div key={index} >
-          <Link to="/ProductDetails"> <img className='image_change' src={item.images[0].big.url}/> </Link>
+          {data.map((item)=>{
+          return  <div key={item.id} >
+            <img src={item.images[0].big.url}/>
             <h5>{item.price.value.display}</h5>
             <p>{item.title}</p>
-            <p> {item.location},{item.locations_resolved.COUNTRY_name} </p>
+            <p>{item.locations_resolved.ADMIN_LEVEL_3_name} , {item.locations_resolved.ADMIN_LEVEL_1_name}</p>
           </div>
-          }):  data.map((item,index)=>{
-            return    <div key={index} >
-               <Link to="/ProductDetails"><img className='image_change' src={item.images[0].big.url}/></Link>
-             <h5>{item.price.value.display}</h5>
-              <p>{item.title}</p>
-              <p> {item.location},{item.locations_resolved.COUNTRY_name} </p>
-            </div> 
-            })}
+          })}
       </div>
 
-      <button className='Load_button' onClick={load_More}>Load More</button>
-     
     </div>
+  )
+}
 
-    </>
-  );
-};
-
-export default Homes;
+export default Home

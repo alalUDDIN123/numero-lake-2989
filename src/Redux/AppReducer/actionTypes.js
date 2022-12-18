@@ -22,7 +22,3 @@ export const Delete_User= "Delete_User";
 export const Update_User="Update_User"
 
 export const Search_Product= "Search_Product"
-
-export const home_data_1 = "home_data_1"
-
-export const filter_data_1 = "filter_data_1"
