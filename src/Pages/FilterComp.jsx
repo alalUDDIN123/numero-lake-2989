@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Button, Checkbox, Divider, Image, Input, RangeSlider, RangeSliderFilledTrack, RangeSliderThumb, RangeSliderTrack, Text } from '@chakra-ui/react'
+import { useSearchParams } from 'react-router-dom'
 
 const FilterComp = () => {
 
