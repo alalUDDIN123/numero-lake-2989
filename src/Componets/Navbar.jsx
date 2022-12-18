@@ -67,47 +67,43 @@ const Navbar = () => {
   };
 
   return (
-    <>
-      {login ? (
-        <div className="opacity_div">
-          {" "}
-          <div className="login_form">
-            <span>
-              <FontAwesomeIcon icon={faXmark} onClick={Login_function} />
-            </span>
-            <img src="https://hotemoji.com/images/dl/d/guitar-emoji-by-twitter.png" />
-            <p>Close deals fromm the comfort of ypur home</p>
-            <div className="inner_div">
-              <FontAwesomeIcon icon={faMobileScreen} />
-              <p>Continue with phone</p>
-            </div>
-            <div className="inner_div">
-              <FontAwesomeIcon icon={faG} />
-              <p>
-                <button onClick={handleClick}>Continue with google</button>
-              </p>
-            </div>
-            <p>All your personal details are safe with us</p>
-          </div>{" "}
-        </div>
-      ) : (
-        <div className="maindiv">
-          <Link to="/">
-            {" "}
-            <img className="oolx" src={olx} />{" "}
-          </Link>
-          <div className="outerdiv" onClick={change}>
-            <div className="innerdiv">
-              <div className="innerdiv1">
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
-                <p>{state ? state : "All"}</p>{" "}
-              </div>
-              {select ? (
-                <FontAwesomeIcon icon={faChevronUp} />
-              ) : (
-                <FontAwesomeIcon icon={faChevronDown} />
-              )}
-            </div>
+<> 
+    {login? <div className='opacity_div' >  <div className='login_form' >
+    <span><FontAwesomeIcon icon={faXmark} onClick={Login_function}  /></span>
+    <img src="https://hotemoji.com/images/dl/d/guitar-emoji-by-twitter.png" />
+    <p>Close deals fromm the comfort of ypur home</p>
+    <div className="inner_div" >
+    <FontAwesomeIcon icon={faMobileScreen} />
+    <p>Continue with phone</p>
+    </div>
+    <div className="inner_div" >
+    <FontAwesomeIcon icon= {faG} />
+    <p>Continue with google</p>
+    </div>
+    <p>All your personal details are safe with us</p>
+ </div> </div> :
+    <div className='maindiv'>
+    <Link to="/"  > <img className='oolx' src={olx} /> </Link>
+    <div className='outerdiv' onClick={change} >
+      <div className='innerdiv'>
+        <div className='innerdiv1'> 
+      <FontAwesomeIcon icon={faMagnifyingGlass} />
+        <p>{state?state:"All"}</p> </div>
+        {select?<FontAwesomeIcon icon={faChevronUp} />:<FontAwesomeIcon icon={faChevronDown} /> } 
+      </div>
+    
+     <ul className={select?'option1':'option'}  >
+   <li className='option_list' onClick={()=>functionChange("All")} >
+   <FontAwesomeIcon icon={faLocationDot} /><p>All</p></li>
+   <li className='option_list' onClick={()=>functionChange("kerala")} >
+   <FontAwesomeIcon icon={faLocationDot} /><p>Kerala</p></li>
+   <li className='option_list'onClick={()=>functionChange("Tamil_Nadu")} >
+   <FontAwesomeIcon icon={faLocationDot} /><p>Tamil Nadu</p></li>
+   <li className='option_list' onClick={()=>functionChange("Punjab")} >
+   <FontAwesomeIcon icon={faLocationDot} /><p>Punjab</p></li>
+   <li className='option_list' onClick={()=>functionChange("Maharashtra")} >
+   <FontAwesomeIcon icon={faLocationDot} /><p>Maharashtra</p></li>
+     </ul>
 
             <ul className={select ? "option1" : "option"}>
               <li className="option_list" onClick={() => functionChange("All")}>
@@ -185,16 +181,16 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <h3 onClick={Login_function}>Login</h3>
+  <Link to="/ProductDetails" ><button className='sell_Button' > <FontAwesomeIcon icon={faPlus} /> <p>Sell</p></button> </Link>
+  <Link to="/ProductDetails" ><p className='Admin_button'>Admin</p></Link>
 
           <button>
             <FontAwesomeIcon icon={faPlus} /> <p>Sell</p>
           </button>
           <p className="Admin_button">Admin</p>
-        </div>
-      )}
-    </>
-  );
-};
+        </div> }   </>
+      )
+  
+}
 
 export default Navbar;
