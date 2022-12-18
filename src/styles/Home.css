@@ -66,7 +66,7 @@ color: aqua;
     padding: 20px;
 }
 
-.products>div>img{
+.image_change{
     width: 100%;
     height: 200px;
 }
@@ -106,7 +106,7 @@ color: aqua;
         padding: 20px;
     }
     
-    .products>div>img{
+    .image_change{
         width: 100%;
         height: 200px;
     }
@@ -137,7 +137,7 @@ color: aqua;
             padding: 20px;
         }
         
-        .products>div>img{
+        .image_change{
             width: 100%;
             height: 200px;
         }

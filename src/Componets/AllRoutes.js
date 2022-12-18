@@ -8,6 +8,7 @@ import EditProduct from "../Pages/Admin/EditProduct";
 import Users from "../Pages/Admin/Users";
 import Home from "../Pages/Home";
 import Preview from "../Pages/Preview";
+import { ProductDetails } from "../Pages/ProductDetails";
 import Products from "../Pages/Products";
 
 
@@ -24,6 +25,8 @@ function AllRoutes() {
         <Route path="/admin/Product/edit/:id" element={<EditProduct />}></Route>
         <Route path="/admin/contact" element={<Contact />}></Route>
         <Route path="/admin/users" element={<Users />}></Route>
+        <Route path="/ProductDetails" element={< ProductDetails />}></Route>
+       
       </Routes>
     </>
   );

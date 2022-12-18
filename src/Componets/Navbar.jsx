@@ -68,7 +68,7 @@ const   Login_function = ()=>{
     <p>All your personal details are safe with us</p>
  </div> </div> :
     <div className='maindiv'>
-    <Link to="/"  >   <img className='oolx' src={olx} /> </Link>
+    <Link to="/"  > <img className='oolx' src={olx} /> </Link>
     <div className='outerdiv' onClick={change} >
       <div className='innerdiv'>
         <div className='innerdiv1'> 
@@ -116,8 +116,8 @@ const   Login_function = ()=>{
  
   <h3 onClick={Login_function} >Login</h3>
 
-  <button><FontAwesomeIcon icon={faPlus} /> <p>Sell</p></button>
-   <p className='Admin_button'>Admin</p>
+  <Link to="/ProductDetails" ><button className='sell_Button' > <FontAwesomeIcon icon={faPlus} /> <p>Sell</p></button> </Link>
+  <Link to="/ProductDetails" ><p className='Admin_button'>Admin</p></Link>
 
     </div>}
 

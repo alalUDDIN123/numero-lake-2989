@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import axios from "axios"
 import { useDispatch, useSelector } from 'react-redux'
 import { home_data_1 } from '../Redux/AppReducer/actionTypes'
+import {Link} from "react-router-dom"
 
 const Homes = () => {
   const[load,Setload] = useState([])  //for load data 
@@ -151,18 +152,18 @@ const Homes = () => {
       <div className='products' >
           {filters.length>0? filters.map((item,index)=>{
           return  <div key={index} >
-            <img src={item.images[0].big.url}/>
+          <Link to="/ProductDetails"> <img className='image_change' src={item.images[0].big.url}/> </Link>
             <h5>{item.price.value.display}</h5>
             <p>{item.title}</p>
             <p> {item.location},{item.locations_resolved.COUNTRY_name} </p>
           </div>
           }):  data.map((item,index)=>{
-            return  <div key={index} >
-              <img src={item.images[0].big.url}/>
-              <h5>{item.price.value.display}</h5>
+            return    <div key={index} >
+               <Link to="/ProductDetails"><img className='image_change' src={item.images[0].big.url}/></Link>
+             <h5>{item.price.value.display}</h5>
               <p>{item.title}</p>
               <p> {item.location},{item.locations_resolved.COUNTRY_name} </p>
-            </div>
+            </div> 
             })}
       </div>
 

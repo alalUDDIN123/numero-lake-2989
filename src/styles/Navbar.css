@@ -44,7 +44,7 @@
     cursor: pointer;
 }
 
-.maindiv>button{
+.sell_Button{
     display: flex;
     align-items: center;
     background-color: white;
@@ -61,7 +61,7 @@
 }
 
 
-.maindiv>button:hover{
+.sell_Button:hover{
     cursor: pointer;
 }
 
@@ -282,7 +282,7 @@
         display: none;
     }
 
-    .maindiv>button{
+    .sell_Button{
         margin-right: 1rem;
     }
 
@@ -336,7 +336,7 @@
    
     
 
-    .maindiv>button{
+    .sell_Button{
         margin-left: 20%;
     }
 
@@ -393,7 +393,7 @@
     font-size: 20px;
 }
 
-.maindiv>button{
+.sell_Button{
     width: auto;
     margin-left: -10px;
 }
