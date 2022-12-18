@@ -1,19 +1,19 @@
 import React from 'react'
-import FilterComp from './FilterComp'
-import ProductComp from './ProductComp'
 import { Box } from '@chakra-ui/react';
+import MobFilter from './MobFilter';
+import MobComp from './MobComp';
 
-function Products() {
+function Mobile() {
   return (
     <Box display="flex" bg="white" color="black">
       <Box w="27%">
-        <FilterComp />
+        <MobFilter />
       </Box>
       <Box w="70%">
-        <ProductComp />
+        <MobComp />
       </Box>
   </Box>
   )
 }
 
-export default Products
+export default Mobile;

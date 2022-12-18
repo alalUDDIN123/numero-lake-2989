@@ -1,19 +1,19 @@
 import React from 'react'
-import FilterComp from './FilterComp'
-import ProductComp from './ProductComp'
 import { Box } from '@chakra-ui/react';
+import BikeFilter from './BikeFilter';
+import BikeComp from './BikeComp';
 
-function Products() {
+function Bikes() {
   return (
     <Box display="flex" bg="white" color="black">
       <Box w="27%">
-        <FilterComp />
+        <BikeFilter />
       </Box>
       <Box w="70%">
-        <ProductComp />
+        <BikeComp />
       </Box>
   </Box>
   )
 }
 
-export default Products
+export default Bikes

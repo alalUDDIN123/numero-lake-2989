@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Box, Button, Checkbox, Divider, Image, Input, RangeSlider, RangeSliderFilledTrack, RangeSliderThumb, RangeSliderTrack, Text } from '@chakra-ui/react'
 import { useSearchParams } from 'react-router-dom'
 
-const FilterComp = () => {
+const BikeFilter = () => {
 
     const location= [
         "Maharashtra", "Tamil Nadu", "Kerala", "Uttar Pradesh",  "Delhi",
@@ -55,15 +55,9 @@ const FilterComp = () => {
         "Under 3 Years", "Under 5 Years", "Under 7 Years",
         "7 Years and Above",
     ]
-    const owners=[
-        "First", "Second", "Third", "Fourth", "More than Four"
-    ]
     const kmDriven= [
         "Below 25000km", "25000km - 50000km", "50000km - 75000km",
         "75000km - 100000km", "100000km and Above"
-    ]
-    const fuel= [
-        "Petrol", "Diesel", "LPG", "CNG & Hybrids", "Electric"
     ]
 
 
@@ -143,6 +137,32 @@ const FilterComp = () => {
         </Box>
         <Box className="filtetcompfilter">
             <Text mb="15px" fontSize="larger" fontWeight="bold" color="black">Filters</Text>
+            <Box mt="10px" className="budget">
+                <Box>
+                    <Text fontWeight="bold" color="black">BUDGET</Text>
+                    <Text>Choose from options below</Text>
+                    <Box>
+                        {budget && budget.map((el)=>{
+                            return <Box border="1px solid gray" w="100%" m="10px auto">
+                                <Text m="0px">{el}</Text>
+                            </Box>
+                        })}
+                    </Box>
+                    <Box>
+                        <Text>Choose a range below</Text>
+                        <Box display="flex">
+                            <RangeSlider defaultValue={[100, 24000]} min={1} max={50000} step={30}>
+                                <RangeSliderTrack bg='gray.100'>
+                                    <RangeSliderFilledTrack bg='gray' />
+                                </RangeSliderTrack>
+                                <RangeSliderThumb border="gray" boxSize={6} index={0} />
+                                <RangeSliderThumb border="gray" boxSize={6} index={1} />
+                            </RangeSlider>
+                            <Button border="1px solid gray">Apply</Button>
+                        </Box>
+                    </Box>
+                </Box>
+            </Box>
             <Box className="brandAndModel">
                 <Box>
                     <Text fontWeight="bold" color="black">BRAND AND MODEL</Text>
@@ -187,141 +207,10 @@ const FilterComp = () => {
                     </Box>
                 </Box>
             </Box>
-            <Box mt="10px" className="budget">
-                <Box>
-                    <Text fontWeight="bold" color="black">BUDGET</Text>
-                    <Text>Choose from options below</Text>
-                    <Box>
-                        {budget && budget.map((el)=>{
-                            return <Box border="1px solid gray" w="100%" m="10px auto">
-                                <Text m="0px">{el}</Text>
-                            </Box>
-                        })}
-                    </Box>
-                    <Box>
-                        <Text>Choose a range below</Text>
-                        <Box display="flex">
-                            <RangeSlider defaultValue={[10000, 600000]} min={1} max={1000000} step={30}>
-                                <RangeSliderTrack bg='gray.100'>
-                                    <RangeSliderFilledTrack bg='gray' />
-                                </RangeSliderTrack>
-                                <RangeSliderThumb border="gray" boxSize={6} index={0} />
-                                <RangeSliderThumb border="gray" boxSize={6} index={1} />
-                            </RangeSlider>
-                            <Button border="1px solid gray">Apply</Button>
-                        </Box>
-                    </Box>
-                </Box>
-            </Box>
-            <Box mt="10px" className="year">
-                <Box>
-                    <Text fontWeight="bold" color="black">YEAR</Text>
-                    <Text>Choose from options below</Text>
-                    <Box>
-                        {year && year.map((el)=>{
-                            return <Box border="1px solid gray" w="100%" m="10px auto">
-                                <Text m="0px">{el}</Text>
-                            </Box>
-                        })}
-                    </Box>
-                    <Box>
-                        <Text>Choose a range below</Text>
-                        <Box display="flex" alignItems="center" justifyContent="space-between">
-                            <Input p="0px" h="25px" w="80px" placeholder='2002' />
-                            <Text>to</Text>
-                            <Input p="0px" h="25px" w="80px" placeholder='2022' />
-                            <Button border="1px solid gray">Apply</Button>
-                        </Box>
-                    </Box>
-                </Box>
-            </Box>
-            <Box mt="10px" className="noOfOwners">
-                <Box>
-                    <Text fontWeight="bold" color="black">NO. OF OWNERS</Text>
-                    <Text>Choose from options below</Text>
-                    <Box>
-                        {owners && owners.map((el)=>{
-                            return <Box display="flex" gap="5px">
-                                <Checkbox border="gray" checked={category.includes({el})} value={el} onChange={handleFilterCheckbox} />
-                                <label>{el}</label>
-                            </Box>
-                        })}
-                    </Box>
-                </Box>
-            </Box>
-            <Divider color="black" />
-            <Box mt="10px" className="inspectionStatus">
-                <Box>
-                    <Text fontWeight="bold" color="black">INSPECTION STATUS</Text>
-                    <Text>Choose from options below</Text>
-                    <Box>
-                        <Box display="flex" gap="5px">
-                            <Checkbox border="gray" checked={category.includes("inspection_info")} value="inspection_info" onChange={handleFilterCheckbox} />
-                            <label>Inspected Cars Only</label>
-                        </Box>
-                    </Box>
-                </Box>
-            </Box>
-            <Box mt="10px" className="kmDriven">
-                <Box>
-                    <Text fontWeight="bold" color="black">KM DRIVEN</Text>
-                    <Text>Choose from options below</Text>
-                    <Box>
-                        {kmDriven && kmDriven.map((el)=>{
-                            return <Box border="1px solid gray" w="100%" m="10px auto">
-                                <Text m="0px">{el}</Text>
-                            </Box>
-                        })}
-                    </Box>
-                    <Box>
-                        <Text>Choose a range below</Text>
-                        <Box display="flex">
-                            <RangeSlider defaultValue={[1000, 90000]} min={1} max={200000} step={30}>
-                                <RangeSliderTrack bg='gray.100'>
-                                    <RangeSliderFilledTrack bg='gray' />
-                                </RangeSliderTrack>
-                                <RangeSliderThumb border="gray" boxSize={6} index={0} />
-                                <RangeSliderThumb border="gray" boxSize={6} index={1} />
-                            </RangeSlider>
-                            <Button border="1px solid gray">Apply</Button>
-                        </Box>
-                    </Box>
-                </Box>
-            </Box>
-            <Box mt="10px" className="fuel">
-                <Box>
-                    <Text fontWeight="bold" color="black">FUEL</Text>
-                    <Text>Choose from below options</Text>
-                    <Box display="flex" justifyContent="flex-end">
-                        <Box w="98%">
-                            {fuel && fuel.map((el)=>{
-                                return <Box display="flex" gap="5px">
-                                    <Checkbox border="gray"  checked={category.includes({el})} value={el} onChange={handleFilterCheckbox} />
-                                    <label>{el}</label>
-                                </Box>
-                            })}
-                        </Box>
-                    </Box>
-                </Box>
-            </Box>
-            <Box mt="10px" className="transmision">
-                <Box>
-                    <Text fontWeight="bold" color="black">TRANSMISSION</Text>
-                    <Text>Choose from below options</Text>
-                    <Box>
-                        <Box border="1px solid gray" w="100%" m="10px auto">
-                            <Text m="0px">Automatic</Text>
-                        </Box>
-                        <Box border="1px solid gray" w="100%" m="10px auto">
-                            <Text m="0px">Manual</Text>
-                        </Box>
-                    </Box>
-                </Box>
-            </Box>
         </Box>
       </Box>
     </Box>
   )
 }
 
-export default FilterComp
+export default BikeFilter
