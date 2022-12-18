@@ -14,7 +14,7 @@ const ProductCard = ({props}) => {
         <Text fontSize="11px" m="1">{props.locations_resolved.ADMIN_LEVEL_3_name}</Text>
       </Box>
       <Box boxSize="30px" rounded="50%" display="flex" justifyContent="center" alignItems="center" position="absolute" top="5px" right="5px" bg="#424040">
-        <Icon boxSize={24} color="white" as={BiHeart} />
+        <Icon boxSize={6} color="white" as={BiHeart} />
       </Box>
     </Box>
   )
