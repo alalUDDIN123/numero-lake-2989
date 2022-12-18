@@ -184,8 +184,89 @@
 }
 
 
+/* login popup */
+
+
+.overlay{
+    position: fixed;
+    z-index: 5;
+    width:100%;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.login_form{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5%;
+    margin: auto;
+    margin-top: 50px;
+    width: 300px;
+    height: 500px;
+    border: 1px solid white;
+    background-color: white;
+    position: absolute;
+    left: 40%;
+    z-index: 2;
+}
+
+.login_form>img{
+    padding: 20px;
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+.login_form>p{
+    text-align: center;
+}
+
+.login_form>span{
+   margin-left: 280px;
+   background-color: aqua;
+   padding: 1px 5px;
+}
+.login_form>span:hover{
+    cursor: pointer;
+}
+.inner_div{
+    margin:20px auto;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    width: 250px;
+    height:50px;
+}
+
+
+.inner_div>p{
+    margin-left: 20px;
+}
+.inner_div>p:hover{
+    color:white
+}
+
+.inner_div:hover{
+    cursor: pointer;
+    background-color: aqua;
+}
+
+.opacity_div{
+   
+    width:100% ;
+   height:100vh ;
+   background: rgba(0, 0, 0, 0.5);
+}
+
+
+
 @media all and (min-width:320px) and (max-width:500px){
 
+    .login_form{
+       
+        left: 15%;
+        z-index: 2;
+    }
   
 
     .oolx{
@@ -213,7 +294,11 @@
 }
 
 @media all and (min-width:501px) and (max-width:699px){
-
+    .login_form{
+       
+        left: 30%;
+        z-index: 2;
+    }
   
   .glass{
     padding: 4px;

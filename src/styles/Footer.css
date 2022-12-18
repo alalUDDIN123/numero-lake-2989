@@ -9,8 +9,9 @@
     background-color: aquamarine;
 }
 
-.upper>div>h5{
+.upper>div>h3{
     color: #002f34;
+    margin-bottom: 10px;
 }
 
 .upper>div>p:hover{

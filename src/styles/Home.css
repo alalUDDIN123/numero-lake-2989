@@ -84,7 +84,13 @@ color: aqua;
     border-color: black;
 }
 
-
+.products>div>h5{
+    color: black;
+    margin-top: 10px;
+}
+.products>div>p{
+    margin-top: 10px;
+}
 
 @media all and (min-width:701px) and (max-width:1000px){
 
