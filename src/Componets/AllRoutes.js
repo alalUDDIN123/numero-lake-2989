@@ -7,7 +7,6 @@ import Contact from "../Pages/Admin/Contact";
 import EditProduct from "../Pages/Admin/EditProduct";
 import Users from "../Pages/Admin/Users";
 import Home from "../Pages/Home";
-import Mobile from "../Pages/Mobile";
 // import Preview from "../Pages/Preview";
 import { ProductDetails } from "../Pages/ProductDetails";
 import Products from "../Pages/Products";
@@ -27,7 +26,6 @@ function AllRoutes() {
         <Route path="/admin/contact" element={<Contact />}></Route>
         <Route path="/admin/users" element={<Users />}></Route>
         <Route path="/ProductDetails" element={< ProductDetails />}></Route>
-        <Route path="/mobile" element={<Mobile />}></Route>
       </Routes>
     </>
   );
