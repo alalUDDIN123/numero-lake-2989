@@ -26,7 +26,6 @@ function AllRoutes() {
         <Route path="/admin/contact" element={<Contact />}></Route>
         <Route path="/admin/users" element={<Users />}></Route>
         <Route path="/ProductDetails" element={< ProductDetails />}></Route>
-       
       </Routes>
     </>
   );
