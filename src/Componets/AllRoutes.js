@@ -7,10 +7,10 @@ import Contact from "../Pages/Admin/Contact";
 import EditProduct from "../Pages/Admin/EditProduct";
 import Users from "../Pages/Admin/Users";
 import Home from "../Pages/Home";
-import Preview from "../Pages/Preview";
+// import Preview from "../Pages/Preview";
 import { ProductDetails } from "../Pages/ProductDetails";
 import Products from "../Pages/Products";
-import { ProductDetails } from "../Pages/ProductDetails";
+// import { ProductDetails } from "../Pages/ProductDetails";
 
 function AllRoutes() {
   return (
