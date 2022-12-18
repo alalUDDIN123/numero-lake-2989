@@ -105,8 +105,8 @@ const FilterComp = () => {
 
 
   return (
-    <Box textAlign="left" display="flex" justifyContent="flex-end" color="gray.800">
-      <Box w="95%" p="0px 10px">
+    <Box textAlign="left" display="flex" justifyContent="flex-end">
+      <Box w="90%" p="0px 10px" >
         <Box className="filtetcompHome">
             <Text color="black" fontSize="25px" fontWeight="bold">Used Cars in India</Text>
             <Box className="categories">
@@ -157,28 +157,28 @@ const FilterComp = () => {
                         })}
                     </Box>
                 </Box>
-                <Divider color="black" />
-                <Box mt="15px" className="allBrands">
-                    <Text fontWeight="bold" color="black">ALL BRANDS</Text>
-                    <Box display="flex" justifyContent="flex-end" h="170px" overflow="auto">
+                <Divider />
+                <Box className="allBrands">
+                    <Text>ALL BRANDS</Text>
+                    <Box display="flex" justifyContent="flex-end" h="200px" overflow="auto">
                         <Box w="98%">
                             {brands && brands.map((el)=>{
-                                return <Box display="flex" gap="5px">
-                                    <Checkbox border="gray" checked={category.includes({el})} value={el} onChange={handleFilterCheckbox} />
+                                return <Box display="flex">
+                                    <Checkbox border="1px solid black" />
                                     <label>{el}</label>
                                 </Box>
                             })}
                         </Box>
                     </Box>
                 </Box>
-                <Divider color="black" />
-                <Box mt="10px" className="allModels">
-                    <Text fontWeight="bold" color="black">ALL MODELS</Text>
-                    <Box display="flex" justifyContent="flex-end" h="170px" overflow="auto">
+                <Divider />
+                <Box className="allModels">
+                    <Text>ALL MODELS</Text>
+                    <Box display="flex" justifyContent="flex-end" h="200px" overflow="auto">
                         <Box w="98%">
                             {allModels && allModels.map((el)=>{
-                                return <Box display="flex" gap="5px">
-                                    <Checkbox border="gray" checked={category.includes({el})} value={el} onChange={handleFilterCheckbox} />
+                                return <Box display="flex">
+                                    <Checkbox border="1px solid black" />
                                     <label>{el}</label>
                                 </Box>
                             })}
@@ -199,16 +199,13 @@ const FilterComp = () => {
                     </Box>
                     <Box>
                         <Text>Choose a range below</Text>
-                        <Box display="flex">
-                            <RangeSlider defaultValue={[10000, 600000]} min={1} max={1000000} step={30}>
-                                <RangeSliderTrack bg='gray.100'>
-                                    <RangeSliderFilledTrack bg='gray' />
-                                </RangeSliderTrack>
-                                <RangeSliderThumb border="gray" boxSize={6} index={0} />
-                                <RangeSliderThumb border="gray" boxSize={6} index={1} />
-                            </RangeSlider>
-                            <Button border="1px solid gray">Apply</Button>
-                        </Box>
+                        <RangeSlider defaultValue={[1, 500000]} min={1} max={1000000} step={30}>
+                        <RangeSliderTrack bg='black.800'>
+                            <RangeSliderFilledTrack bg='black' />
+                        </RangeSliderTrack>
+                        <RangeSliderThumb boxSize={6} index={0} />
+                        <RangeSliderThumb boxSize={6} index={1} />
+                        </RangeSlider>
                     </Box>
                 </Box>
             </Box>
@@ -240,8 +237,8 @@ const FilterComp = () => {
                     <Text>Choose from options below</Text>
                     <Box>
                         {owners && owners.map((el)=>{
-                            return <Box display="flex" gap="5px">
-                                <Checkbox border="gray" checked={category.includes({el})} value={el} onChange={handleFilterCheckbox} />
+                            return <Box display="flex">
+                                <Checkbox border="1px solid black" />
                                 <label>{el}</label>
                             </Box>
                         })}
@@ -254,8 +251,8 @@ const FilterComp = () => {
                     <Text fontWeight="bold" color="black">INSPECTION STATUS</Text>
                     <Text>Choose from options below</Text>
                     <Box>
-                        <Box display="flex" gap="5px">
-                            <Checkbox border="gray" checked={category.includes("inspection_info")} value="inspection_info" onChange={handleFilterCheckbox} />
+                        <Box display="flex">
+                            <Checkbox border="1px solid black" />
                             <label>Inspected Cars Only</label>
                         </Box>
                     </Box>
@@ -274,16 +271,13 @@ const FilterComp = () => {
                     </Box>
                     <Box>
                         <Text>Choose a range below</Text>
-                        <Box display="flex">
-                            <RangeSlider defaultValue={[1000, 90000]} min={1} max={200000} step={30}>
-                                <RangeSliderTrack bg='gray.100'>
-                                    <RangeSliderFilledTrack bg='gray' />
-                                </RangeSliderTrack>
-                                <RangeSliderThumb border="gray" boxSize={6} index={0} />
-                                <RangeSliderThumb border="gray" boxSize={6} index={1} />
-                            </RangeSlider>
-                            <Button border="1px solid gray">Apply</Button>
-                        </Box>
+                        <RangeSlider defaultValue={[1, 50000]} min={1} max={200000} step={30}>
+                        <RangeSliderTrack bg='black.800'>
+                            <RangeSliderFilledTrack bg='black' />
+                        </RangeSliderTrack>
+                        <RangeSliderThumb boxSize={6} index={0} />
+                        <RangeSliderThumb boxSize={6} index={1} />
+                        </RangeSlider>
                     </Box>
                 </Box>
             </Box>
@@ -294,8 +288,8 @@ const FilterComp = () => {
                     <Box display="flex" justifyContent="flex-end">
                         <Box w="98%">
                             {fuel && fuel.map((el)=>{
-                                return <Box display="flex" gap="5px">
-                                    <Checkbox border="gray"  checked={category.includes({el})} value={el} onChange={handleFilterCheckbox} />
+                                return <Box display="flex">
+                                    <Checkbox border="1px solid black" />
                                     <label>{el}</label>
                                 </Box>
                             })}
