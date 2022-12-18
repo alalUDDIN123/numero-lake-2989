@@ -10,7 +10,7 @@ import Home from "../Pages/Home";
 import Preview from "../Pages/Preview";
 import { ProductDetails } from "../Pages/ProductDetails";
 import Products from "../Pages/Products";
-
+import { ProductDetails } from "../Pages/ProductDetails";
 
 function AllRoutes() {
   return (
@@ -19,7 +19,7 @@ function AllRoutes() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/products" element={<Products />}></Route>
-        <Route path="/preview" element={<Preview />}></Route>
+        <Route path="/products/:id" element={<ProductDetails />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
         <Route path="/admin/addProduct" element={<AddProductForm />}></Route>
         <Route path="/admin/Product/edit/:id" element={<EditProduct />}></Route>

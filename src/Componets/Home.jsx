@@ -10,48 +10,49 @@ import { home_data_1 } from '../Redux/AppReducer/actionTypes'
 import {Link} from "react-router-dom"
 
 const Homes = () => {
-  const[load,Setload] = useState([])  //for load data 
-  const[menu,Setmenu] = useState(false) 
- const[button,Setbutton] = useState(true) //for load button on/off
- const dispatch = useDispatch()
- const filters = useSelector((state)=>state.AppReducer.filter_data)
- const data = useSelector((state)=>state.AppReducer.home_data)
-  const change=()=>{
-    Setmenu(!menu)
-  }
+  const [load, Setload] = useState([]); //for load data
+  const [menu, Setmenu] = useState(false);
+  const [button, Setbutton] = useState(true); //for load button on/off
+  const dispatch = useDispatch();
+  const filters = useSelector((state) => state.AppReducer.filter_data);
+  const data = useSelector((state) => state.AppReducer.home_data);
+  const change = () => {
+    Setmenu(!menu);
+  };
 
-//load data
-  const get_data=()=>{
-    axios({method:"get" ,baseURL:"https://olx-database.vercel.app" , url:"/page2"}).then((res)=> Setload(res.data) )
-  }
+  //load data
+  const get_data = () => {
+    axios({
+      method: "get",
+      baseURL: "https://olx-database.vercel.app",
+      url: "/page2",
+    }).then((res) => Setload(res.data));
+  };
 
+  // load_more function
 
-// load_more function
+  const load_More = async () => {
+    await get_data();
 
-  const  load_More= async ()=>{
-    
-    await get_data()
-   
-    
-     Array.prototype.push.apply(data,load)
-     dispatch({type:home_data_1,payload:data})
-     Setbutton(false)
+    Array.prototype.push.apply(data, load);
+    dispatch({ type: home_data_1, payload: data });
+    Setbutton(false);
+  };
 
-  }
+  // main data
+  const call_again = () => {
+    axios({
+      method: "get",
+      baseURL: "https://olx-database.vercel.app",
+      url: "/page3",
+    }).then((res) => dispatch({ type: home_data_1, payload: res.data }));
+  };
 
-// main data
-  const call_again=()=>{
-    axios({method:"get" ,baseURL:"https://olx-database.vercel.app" , url:"/page3"    }).then((res)=> dispatch({type:home_data_1,payload:res.data}))
-  }  
+  useEffect(() => {
+    call_again();
 
-  useEffect(()=>{
-    
-    call_again()
-
-    get_data()
-   
-  },[])
-
+    get_data();
+  }, []);
 
   return (
   <>
@@ -167,11 +168,12 @@ const Homes = () => {
             })}
       </div>
 
-      {button &&<button className='Load_button' onClick={load_More}>Load More</button>}
-
+      <button className='Load_button' onClick={load_More}>Load More</button>
+     
     </div>
-    </>
-  )
-}
 
-export default Homes
+    </>
+  );
+};
+
+export default Homes;
