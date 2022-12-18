@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Divider, Image, Input, Text } from '@chakra-ui/react'
+import { Box, Button, Checkbox, Divider, Image, Input, RangeSlider, RangeSliderFilledTrack, RangeSliderThumb, RangeSliderTrack, Text } from '@chakra-ui/react'
 
 const FilterComp = () => {
 
@@ -67,7 +67,7 @@ const FilterComp = () => {
 
   return (
     <Box textAlign="left" display="flex" justifyContent="flex-end">
-      <Box w="90%" >
+      <Box w="90%" p="0px 10px" >
         <Box className="filtetcompHome">
             <Text fontSize="25px" fontWeight="bold">Used Cars in India</Text>
             <Box className="categories">
@@ -119,13 +119,13 @@ const FilterComp = () => {
                     </Box>
                 </Box>
                 <Divider />
-                <Box className="allBrands" h="200px" overflow="auto">
+                <Box className="allBrands">
                     <Text>ALL BRANDS</Text>
-                    <Box display="flex" justifyContent="flex-end">
+                    <Box display="flex" justifyContent="flex-end" h="200px" overflow="auto">
                         <Box w="98%">
                             {brands && brands.map((el)=>{
                                 return <Box display="flex">
-                                    <Input type="checkbox" />
+                                    <Checkbox border="1px solid black" />
                                     <label>{el}</label>
                                 </Box>
                             })}
@@ -133,13 +133,13 @@ const FilterComp = () => {
                     </Box>
                 </Box>
                 <Divider />
-                <Box className="allModels" h="200px" overflow="auto">
+                <Box className="allModels">
                     <Text>ALL MODELS</Text>
-                    <Box display="flex" justifyContent="flex-end">
+                    <Box display="flex" justifyContent="flex-end" h="200px" overflow="auto">
                         <Box w="98%">
                             {allModels && allModels.map((el)=>{
                                 return <Box display="flex">
-                                    <Input type="checkbox" />
+                                    <Checkbox border="1px solid black" />
                                     <label>{el}</label>
                                 </Box>
                             })}
@@ -160,7 +160,13 @@ const FilterComp = () => {
                     </Box>
                     <Box>
                         <Text>Choose a range below</Text>
-                        <input type="range" min="1" max="1000000" value="50000" />
+                        <RangeSlider defaultValue={[1, 500000]} min={1} max={1000000} step={30}>
+                        <RangeSliderTrack bg='black.800'>
+                            <RangeSliderFilledTrack bg='black' />
+                        </RangeSliderTrack>
+                        <RangeSliderThumb boxSize={6} index={0} />
+                        <RangeSliderThumb boxSize={6} index={1} />
+                        </RangeSlider>
                     </Box>
                 </Box>
             </Box>
@@ -193,7 +199,7 @@ const FilterComp = () => {
                     <Box>
                         {owners && owners.map((el)=>{
                             return <Box display="flex">
-                                <Input type="checkbox" />
+                                <Checkbox border="1px solid black" />
                                 <label>{el}</label>
                             </Box>
                         })}
@@ -207,7 +213,7 @@ const FilterComp = () => {
                     <Text>Choose from options below</Text>
                     <Box>
                         <Box display="flex">
-                            <Input type="checkbox" />
+                            <Checkbox border="1px solid black" />
                             <label>Inspected Cars Only</label>
                         </Box>
                     </Box>
@@ -226,7 +232,13 @@ const FilterComp = () => {
                     </Box>
                     <Box>
                         <Text>Choose a range below</Text>
-                        <input type="range" min="1" max="200000" value="100000" />
+                        <RangeSlider defaultValue={[1, 50000]} min={1} max={200000} step={30}>
+                        <RangeSliderTrack bg='black.800'>
+                            <RangeSliderFilledTrack bg='black' />
+                        </RangeSliderTrack>
+                        <RangeSliderThumb boxSize={6} index={0} />
+                        <RangeSliderThumb boxSize={6} index={1} />
+                        </RangeSlider>
                     </Box>
                 </Box>
             </Box>
@@ -238,7 +250,7 @@ const FilterComp = () => {
                         <Box w="98%">
                             {fuel && fuel.map((el)=>{
                                 return <Box display="flex">
-                                    <Input type="checkbox" />
+                                    <Checkbox border="1px solid black" />
                                     <label>{el}</label>
                                 </Box>
                             })}
