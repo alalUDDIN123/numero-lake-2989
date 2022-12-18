@@ -184,11 +184,8 @@ const Navbar = () => {
   <Link to="/ProductDetails" ><button className='sell_Button' > <FontAwesomeIcon icon={faPlus} /> <p>Sell</p></button> </Link>
   <Link to="/ProductDetails" ><p className='Admin_button'>Admin</p></Link>
 
-          <button>
-            <FontAwesomeIcon icon={faPlus} /> <p>Sell</p>
-          </button>
-          <p className="Admin_button">Admin</p>
-        </div> }   </>
+        </div>
+         }   </>
       )
   
 }
