@@ -3,7 +3,7 @@ import "../styles/Navbar.css"
 import olx from "../styles/logo1.png"
 import {Link} from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown , faMagnifyingGlass , faLocationDot , faChevronUp , faPlus} from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown , faMagnifyingGlass , faLocationDot , faChevronUp , faPlus,faMobileScreen , faG , faXmark} from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import { text } from '@fortawesome/fontawesome-svg-core'
 import { useEffect } from 'react'
@@ -13,6 +13,7 @@ import { filter_data_1 } from '../Redux/AppReducer/actionTypes'
 
 
 const Navbar = () => {
+  const[login,Setlogin] = useState(false) //login button
   const[filters,Setfilters] = useState([])  //for filtered city data
   const[state,Setstate] = useState() // location for city
   const [select,Setselect] = useState(false)
@@ -45,9 +46,29 @@ const Navbar = () => {
 
 
 
+const   Login_function = ()=>{
+  Setlogin(!login) 
+}
+
+
   return (
+<> 
+    {login? <div className='opacity_div' >  <div className='login_form' >
+    <span><FontAwesomeIcon icon={faXmark} onClick={Login_function}  /></span>
+    <img src="https://hotemoji.com/images/dl/d/guitar-emoji-by-twitter.png" />
+    <p>Close deals fromm the comfort of ypur home</p>
+    <div className="inner_div" >
+    <FontAwesomeIcon icon={faMobileScreen} />
+    <p>Continue with phone</p>
+    </div>
+    <div className="inner_div" >
+    <FontAwesomeIcon icon= {faG} />
+    <p>Continue with google</p>
+    </div>
+    <p>All your personal details are safe with us</p>
+ </div> </div> :
     <div className='maindiv'>
-    <Link to="/Home"  >   <img className='oolx' src={olx} /> </Link>
+    <Link to="/"  >   <img className='oolx' src={olx} /> </Link>
     <div className='outerdiv' onClick={change} >
       <div className='innerdiv'>
         <div className='innerdiv1'> 
@@ -93,12 +114,14 @@ const Navbar = () => {
   </ul>
 </div>
  
-  <h3>Login</h3>
+  <h3 onClick={Login_function} >Login</h3>
 
   <button><FontAwesomeIcon icon={faPlus} /> <p>Sell</p></button>
    <p className='Admin_button'>Admin</p>
 
-    </div>
+    </div>}
+
+</>
   )
 }
 
