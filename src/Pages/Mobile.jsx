@@ -5,7 +5,7 @@ import MobComp from './MobComp';
 
 function Mobile() {
   return (
-    <Box display="flex" bg="white" color="black">
+    <Box display="flex" bg="white" color="black" pt="100px">
       <Box w="27%">
         <MobFilter />
       </Box>

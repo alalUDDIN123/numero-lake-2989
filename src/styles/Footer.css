@@ -9,8 +9,9 @@
     background-color: aquamarine;
 }
 
-.upper>div>h5{
+.upper>div>h3{
     color: #002f34;
+    margin-bottom: 10px;
 }
 
 .upper>div>p:hover{
@@ -73,4 +74,57 @@
 
 .footer{
   margin-top: 5rem;
+}
+
+@media all and (min-width:600px) and (max-width:800px){
+   .logo_div{
+    display: none;
+   }
+   .right>p{
+    display: none;
+   }
+   
+}
+
+
+@media all and (min-width:500px) and (max-width:600px){
+    
+    .olx_div{
+        display: none;
+    }
+
+    .logo_div{
+        display: none;
+       }
+       .right>p{
+        display: none;
+       }
+
+       .left>p{
+        display: none;
+       }
+
+}
+
+@media all and (min-width:320px) and (max-width:500px){
+    
+    .about_div{
+        display: none;
+    }
+
+    .logo_div{
+        display: none;
+       }
+
+       .olx_div{
+        display: none;
+    }
+    .right>p{
+        display: none;
+       }
+
+       .left>p{
+        display: none;
+       }
+
 }
