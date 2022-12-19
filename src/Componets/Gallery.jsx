@@ -43,7 +43,7 @@ export const Gallery = (props) => {
                 _hover={{ opacity: 1 }}
               >
                 <Image
-                  src={image.src}
+                  src={image.url}
                   objectFit="cover"
                   alt={image.alt}
                   fallback={<Skeleton />}

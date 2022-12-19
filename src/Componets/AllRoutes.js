@@ -19,14 +19,13 @@ function AllRoutes() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/products" element={<Products />}></Route>
-        <Route path="/products/:id" element={<ProductDetails />}></Route>
+        <Route path="/:id" element={<ProductDetails />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
         <Route path="/admin/addProduct" element={<AddProductForm />}></Route>
         <Route path="/admin/Product/edit/:id" element={<EditProduct />}></Route>
         <Route path="/admin/contact" element={<Contact />}></Route>
         <Route path="/admin/users" element={<Users />}></Route>
-        <Route path="/ProductDetails" element={< ProductDetails />}></Route>
-       
+        <Route path="/ProductDetails" element={<ProductDetails />}></Route>
       </Routes>
     </>
   );

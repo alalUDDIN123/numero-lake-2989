@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   HStack,
   Box,
@@ -22,15 +22,36 @@ import { HorizontalCarousel } from "../Componets/HorizontalCarousel";
 import { BsHeart, BsShare } from "react-icons/bs";
 import { AiOutlineRight } from "react-icons/ai";
 import mapPlaceholder from "../../src/mapPlaceholder.png";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 export const ProductDetails = () => {
+  const { id } = useParams();
+  let [pData, setPData] = useState({});
+
+  const getData = () => {
+    axios
+      .get(`https://olx-database.vercel.app/page3/${id}`)
+      .then((res) => {
+        setPData(res.data);
+      })
+      .catch((e) => {
+        console.log("Error:", e);
+      });
+  };
+
+  useEffect(() => {
+    getData();
+    console.log(pData);
+  }, []);
+
   return (
     <HStack
-      mt="100px"
+      mt="150px"
       align="flex-start"
       ml="50px"
       mr="50px"
-      pb="30px"
+      // pb="30px"
       backgroundColor="#f2f4f5 "
     >
       <Box
@@ -39,7 +60,7 @@ export const ProductDetails = () => {
         boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
         backgroundColor="#fff"
       >
-        <HorizontalCarousel />
+        <HorizontalCarousel images={pData.images} />
         <Box
           w="100%"
           boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
