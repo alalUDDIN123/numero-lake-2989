@@ -1,7 +1,12 @@
+.Admin_button{
+    color:white ;
+    margin-left: 10px;
+    cursor:pointer ;
+}
 
 .maindiv{
     display: flex;
-    height: 100px;
+    height: auto;
      border: 1px solid;
     background-color: blue;
     align-items: center;
@@ -15,7 +20,8 @@
 .oolx{
  
     height: 4rem;
-    margin-left: 5rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
    
 }
 
@@ -32,12 +38,15 @@
 
 .maindiv>h3{
     margin-left: 2rem;
+    color: white;
 }
 .maindiv>h3:hover{
     cursor: pointer;
 }
 
-.maindiv>button{
+.sell_Button{
+    display: flex;
+    align-items: center;
     background-color: white;
     margin-left: 2rem;
     padding: 0.5rem  1rem;
@@ -48,10 +57,11 @@
     border-right-color: blue;
     border-bottom-color: blueviolet;
     border-width: 5px;
+    width:auto;
 }
 
 
-.maindiv>button:hover{
+.sell_Button:hover{
     cursor: pointer;
 }
 
@@ -66,6 +76,7 @@
     border-width: 2px;
     border-color: aqua;
     background-color: white;
+    width: auto;
 }
 
 .outerdiv{
@@ -109,7 +120,6 @@
 }
 
 .languages{
-    /* border: 1px solid; */
     width:8rem
 }
 
@@ -119,7 +129,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: auto;
     
+}
+
+.select>p{
+    color: white;
 }
 
 .option2{
@@ -145,12 +160,11 @@
 
 .inputdiv{
     display: flex;
-   /* border: 1px solid black; */
+    width: auto;
 }
 
 .inputdiv>p{
     background-color: cornflowerblue;
-    /* padding: 1rem; */
     border: 1px solid black;
    height: 100%;
 
@@ -167,4 +181,227 @@
 
 .inputdiv>.biginput:hover{
     border:1px solid turquoise;
+}
+
+
+/* login popup */
+
+
+.overlay{
+    position: fixed;
+    z-index: 5;
+    width:100%;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.login_form{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5%;
+    margin: auto;
+    margin-top: 50px;
+    width: 300px;
+    height: 500px;
+    border: 1px solid white;
+    background-color: white;
+    position: absolute;
+    left: 40%;
+    z-index: 2;
+}
+
+.login_form>img{
+    padding: 20px;
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+.login_form>p{
+    text-align: center;
+}
+
+.login_form>span{
+   margin-left: 280px;
+   background-color: aqua;
+   padding: 1px 5px;
+}
+.login_form>span:hover{
+    cursor: pointer;
+}
+.inner_div{
+    margin:20px auto;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    width: 250px;
+    height:50px;
+}
+
+
+.inner_div>p{
+    margin-left: 20px;
+}
+.inner_div>p:hover{
+    color:white
+}
+
+.inner_div:hover{
+    cursor: pointer;
+    background-color: aqua;
+}
+
+.opacity_div{
+   
+    width:100% ;
+   height:100vh ;
+   background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media all and (min-width:320px) and (max-width:500px){
+
+    .login_form{
+       
+        left: 15%;
+        z-index: 2;
+    }
+  
+
+    .oolx{
+ 
+        height: 4rem;
+        margin-left: 0.2rem;
+       
+    }
+    .outerdiv{
+        display: none;
+    }
+    .inputdiv{
+        display: none;
+    }
+
+    .sell_Button{
+        margin-right: 1rem;
+    }
+
+    .Admin_button{
+        display: none;
+       }
+   
+
+}
+
+@media all and (min-width:501px) and (max-width:699px){
+    .login_form{
+       
+        left: 30%;
+        z-index: 2;
+    }
+  
+  .glass{
+    padding: 4px;
+  }
+
+    .oolx{
+   
+        height: 4rem;
+        margin-left: 0.2rem;
+    }
+    
+    
+.innerdiv{
+    
+    width: 5rem;
+}
+
+.inputdiv{
+    margin-left: 2rem;
+}
+
+.outerdiv{
+    width: 5rem; 
+}
+.innerdiv1{
+    display: flex;
+    width: 7rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.biginput{
+    display: none;
+}
+   
+    
+
+    .sell_Button{
+        margin-left: 20%;
+    }
+
+    .maindiv>h3{
+        margin-left: 1rem;
+        width:auto ;
+        padding-left: 12px;
+        margin-right: -4rem;
+        font-size: 20px;
+    }
+    .Admin_button{
+        display: none;
+       }
+
+}
+
+@media all and (min-width:700px) and (max-width:1000px){
+
+    .oolx{
+ 
+        height: 4rem;
+    
+        margin-right: 3rem;
+    }
+  
+    .innerdiv1{
+        width: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+   
+    .inputdiv>.biginput{
+        width: 15rem;
+        margin-left: 1rem;
+        font-size: large;
+        padding:0  1rem;
+    }
+    
+.select{
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1rem;
+    
+}
+
+.maindiv>h3{
+    margin-left: 1rem;
+    width:auto ;
+    padding-left: 12px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.sell_Button{
+    width: auto;
+    margin-left: -10px;
+}
+
+
+.Admin_button{
+    display: none;
+   }
+
+
 }

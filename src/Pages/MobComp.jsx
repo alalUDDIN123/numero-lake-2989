@@ -1,4 +1,4 @@
-import { Box, Button, Select, Text } from '@chakra-ui/react'
+import { Box, Button, Link, Select, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import axios from "axios"
@@ -47,7 +47,6 @@ useEffect(()=>{
         .then((r)=>setData(r.data))
         .catch((e)=>console.log(e));
   }
-    console.log(data);
 
   return (
     <Box bg="white">

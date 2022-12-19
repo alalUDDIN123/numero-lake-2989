@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/react';
 
 function Products() {
   return (
-    <Box display="flex" bg="white" color="black">
+    <Box display="flex" bg="white" color="black" pt="100px">
       <Box w="27%">
         <FilterComp />
       </Box>

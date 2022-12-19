@@ -14,14 +14,18 @@ import {
     Updated_Product_Success,
     Update_Product_Request,
     Update_User,
-    UUpdate_Product_Failure
+    UUpdate_Product_Failure,
+    home_data_1,
+    filter_data_1 
 } from "./actionTypes";
 
 const initialState = {
     data: [],
     isLoading:false,
     isError:false,
-    Users:[]
+    Users:[],
+    home_data:[],
+    filter_data:[]
 }
 
 const reducer = (state = initialState, action) => {
@@ -175,6 +179,21 @@ const reducer = (state = initialState, action) => {
              Users:UserAfterDelete
             }
          }
+
+         case  home_data_1:{
+            return{
+                ...state,
+                home_data:payload
+            }
+         }
+         case  filter_data_1:{
+            return{
+                ...state,
+                filter_data:payload
+            }
+         }
+
+
         default: return state;
     }
 
