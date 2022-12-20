@@ -27,3 +27,5 @@
 
 #API
 [API](https://olx-database.vercel.app/)
+
+DEPLOYED LINK:- https://kaleidoscopic-tanuki-2deaf7.netlify.app/
