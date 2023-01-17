@@ -154,9 +154,11 @@ const Homes = () => {
             </div>
           </div>
 
-          <p className="p_tag">Cars</p>
+
+          <Link to="/products"><p className="p_tag">Cars</p></Link>
           <p className="p_tag">Motorcycles</p>
-          <p className="p_tag">Mobile Phones</p>
+          <Link to="/mobile"><p className="p_tag">Mobile Phones</p></Link>
+
           <p className="p_tag">For Sale: Houses & Apartments</p>
           <p className="p_tag">OLX Renew (Mobile)</p>
           <p className="p_tag">Scooters</p>

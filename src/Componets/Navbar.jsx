@@ -78,7 +78,7 @@ const Navbar = () => {
     </div>
     <div className="inner_div" >
     <FontAwesomeIcon icon= {faG} />
-    <p>Continue with google</p>
+    <p onClick={handleClick}>Continue with google</p>
     </div>
     <p>All your personal details are safe with us</p>
  </div> </div> :
@@ -181,14 +181,12 @@ const Navbar = () => {
             </ul>
           </div>
 
-  <Link to="/ProductDetails" ><button className='sell_Button' > <FontAwesomeIcon icon={faPlus} /> <p>Sell</p></button> </Link>
-  <Link to="/ProductDetails" ><p className='Admin_button'>Admin</p></Link>
+  <h3 id='login_button' onClick={Login_function}  >Login</h3>
+  <Link to="/admin/addProduct" ><button className='sell_Button' > <FontAwesomeIcon icon={faPlus} /> <p>Sell</p></button> </Link>
+  <Link to="/admin" ><p className='Admin_button'>Admin</p></Link>
 
-          <button>
-            <FontAwesomeIcon icon={faPlus} /> <p>Sell</p>
-          </button>
-          <p className="Admin_button">Admin</p>
-        </div> }   </>
+        </div>
+         }   </>
       )
   
 }

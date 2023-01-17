@@ -24,14 +24,15 @@ import { AiOutlineRight } from "react-icons/ai";
 import mapPlaceholder from "../../src/mapPlaceholder.png";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import ProductCard from "./ProductCard";
+
 
 export const ProductDetails = () => {
   const { id } = useParams();
   let [pData, setPData] = useState({});
 
   const getData = () => {
-    axios
-      .get(`https://olx-database.vercel.app/page3/${id}`)
+        return axios.get(`https://olx-database.vercel.app/mobile/${id}`)
       .then((res) => {
         setPData(res.data);
       })
@@ -42,8 +43,9 @@ export const ProductDetails = () => {
 
   useEffect(() => {
     getData();
-    console.log(pData);
   }, []);
+
+  }, [id]);
 
   return (
     <HStack
@@ -60,7 +62,9 @@ export const ProductDetails = () => {
         boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
         backgroundColor="#fff"
       >
-        <HorizontalCarousel images={pData.images} />
+
+        <HorizontalCarousel images={pData?.images} />
+
         <Box
           w="100%"
           boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"

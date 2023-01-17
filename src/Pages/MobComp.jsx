@@ -1,11 +1,11 @@
-import { Box, Button, Select, Text } from '@chakra-ui/react'
+import { Box, Button, Link, Select, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import axios from "axios"
 import ProductCard from './ProductCard'
 import { useLocation, useSearchParams } from 'react-router-dom'
 
-const ProductComp = () => {
+const MobComp = () => {
   
   const [data, setData]= useState([]);
   
@@ -43,58 +43,16 @@ useEffect(()=>{
   }, [data.length, location.search])
 
   const getData= (params)=>{
-    return axios.get("https://olx-database.vercel.app/car", params)
+    return axios.get("https://olx-database.vercel.app/mobile", params)
         .then((r)=>setData(r.data))
         .catch((e)=>console.log(e));
   }
 
-
-
-  
-
-
-
-  // const handleFilterCheckbox= (e)=>{
-  //     const newCategory= [...category];
-  //     if(newCategory.includes(e.target.value)){
-  //         newCategory.splice(newCategory.indexOf(e.target.value), 1);
-  //     }else{
-  //         newCategory.push(e.target.value)
-  //     }
-  //     setCategory(newCategory);
-  // }
-
-  // const handleSort= (e)=>{
-  //     setSortBy(e.target.value);
-  // }
-
-  // useEffect(()=>{
-  //     let params={};
-  //     params.category= category;
-  //     sort && (params.sort= sort);
-  //     setSearchParams(params);
-  // }, [category, setSearchParams, searchParams, sort])
-
-
-    // const [data, setData]= useState([]);
-
-    // useEffect(()=>{
-    //     getData();
-    // }, [])
-
-    // const getData= () => {
-    //     axios.get("https://olx-database.vercel.app/car")
-    //     .then((r)=>setData(r.data))
-    //     .catch((e)=>console.log(e));
-    // }
-
-    console.log(data);
-
   return (
-    <Box>
-      <Box justifyContent="right" display="flex" alignItems="center" mb="20px">
+    <Box bg="white">
+      <Box justifyContent="right" display="flex" bg="white" alignItems="center" mb="20px">
         <Text fontSize="large" fontWeight="bold">Sort By:-</Text>
-        <Select border="1px solid gray" w="10%" bg="white"  onChange={handleSort}>
+        <Select w="10%" bg="white" onChange={handleSort}>
               <option value="" name="sortBy">Sort</option>
               <option value="asc" name="sortBy">Price: Low to High</option>
               <option value="desc" name="sortBy">Price: High to Low</option>
@@ -112,4 +70,4 @@ useEffect(()=>{
   )
 }
 
-export default ProductComp
+export default MobComp
